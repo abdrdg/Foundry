@@ -10,16 +10,18 @@ public class AgilityMiniGameManager : MonoBehaviour
     public List<GameObject> Lanes;
 
     public float lerpTime = 1f;
-    float currentLerpTime;
 
     public float Distance;
     public float MovePower = 2.0f;
     public Vector2 mousePosition;
 
+    float Yoffset = 2.5f;
+
     public Vector3 _positionToMove;
     void Awake()
     {
         Dog = GameObject.FindGameObjectWithTag("Player");
+        _positionToMove = new Vector3(Dog.transform.position.x, Dog.transform.position.y, Dog.transform.position.z);
     }
 
     public void Update()
@@ -28,28 +30,22 @@ public class AgilityMiniGameManager : MonoBehaviour
         {
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            this.gameObject.transform.position = mousePosition;
-
-            Distance = Mathf.Sqrt((Dog.transform.position.x - this.transform.position.x) * (Dog.transform.position.x - this.transform.position.x)
-               + (Dog.transform.position.y - this.transform.position.y) * (Dog.transform.position.y - this.transform.position.y));
-
-
-
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButton(0))
             {
-                if (mousePosition.y < 0 && Dog.transform.position.y > -2.0f)
+                // Move dog upwards based on position of cursor if it's on top
+                if (mousePosition.y < Dog.transform.position.y && Dog.transform.position.y > -Yoffset)
                 {
                     _positionToMove = new Vector3(Dog.transform.position.x, Dog.transform.position.y - MovePower, Dog.transform.position.z);
 
                 }
-
-                if (mousePosition.y > 0 && Dog.transform.position.y < 2.0f)
+                // Move dog downwards based on position of cursor if it's below
+                else if (mousePosition.y > Dog.transform.position.y && Dog.transform.position.y < Yoffset)
                 {
                     _positionToMove = new Vector3(Dog.transform.position.x, Dog.transform.position.y + MovePower, Dog.transform.position.z);
                 }
+                
             }
-
-            Dog.transform.position = Vector3.MoveTowards(Dog.transform.position, _positionToMove, 2f * Time.deltaTime);
+            Dog.transform.position = Vector3.MoveTowards(Dog.transform.position, _positionToMove, 2f * Time.deltaTime);//moves the dog
         }
     }
 
