@@ -42,12 +42,11 @@ public class FeedingGameManager : MonoBehaviour
             {
                 Active = false;
                 countdownTime = 0;
-                minutes = 0;
-                seconds = 0;
                 Timer.text = "00:00";
                 Stop = true;
                 Time.timeScale = 0;
                 //button.gameObject.SetActive(true);
+                WinLoseConditions();
             }
         }
         if (Stop)
@@ -70,5 +69,17 @@ public class FeedingGameManager : MonoBehaviour
     {
         badFood++;
         badScore.text = "Bad Food: " + badFood.ToString();
+    }
+
+    public void WinLoseConditions()
+    {
+        if(goodFood>badFood)
+        {
+            Debug.Log("Win");
+        }
+        else if(goodFood<badFood)
+        {
+            Debug.Log("Lose");
+        }
     }
 }
