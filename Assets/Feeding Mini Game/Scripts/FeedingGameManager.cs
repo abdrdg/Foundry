@@ -6,19 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class FeedingGameManager : MonoBehaviour
 {
-    public int FoodInBowl;
+    public int goodFood;
+    public int badFood;
     public float countdownTime = 600;
     private bool Active = true;
     private bool Stop = false;
     public static FeedingGameManager timer;
-    public TMP_Text Text;
-    public TMP_Text Score;
+    public TMP_Text goodScore;
+    public TMP_Text Timer;
+    public TMP_Text badScore;
     public Canvas button;
 
     private void Start()
     {
         Time.timeScale = 1;
-        button.gameObject.SetActive(false);
+        //button.gameObject.SetActive(false);
     }
 
     void Update()
@@ -34,7 +36,7 @@ public class FeedingGameManager : MonoBehaviour
             int minutes = Mathf.FloorToInt(countdownTime / 60F);
             int seconds = Mathf.FloorToInt(countdownTime - minutes * 60);
             string niceTime = string.Format("{0:0}:{1:00}", minutes, seconds);
-            Text.text = niceTime;
+            Timer.text = niceTime;
 
             if (countdownTime <= 0)
             {
@@ -42,10 +44,10 @@ public class FeedingGameManager : MonoBehaviour
                 countdownTime = 0;
                 minutes = 0;
                 seconds = 0;
-                Text.text = "00:00";
+                Timer.text = "00:00";
                 Stop = true;
                 Time.timeScale = 0;
-                button.gameObject.SetActive(true);
+                //button.gameObject.SetActive(true);
             }
         }
         if (Stop)
@@ -59,9 +61,14 @@ public class FeedingGameManager : MonoBehaviour
         SceneManager.LoadScene("FoodBowl");
     }
 
-    public void UpdateScore()
+    public void UpdateGoodScore()
     {
-        FoodInBowl++;
-        Score.text = "Score: " + FoodInBowl.ToString();
+        goodFood++;
+        goodScore.text = "Good Food: " + goodFood.ToString();
+    }
+    public void UpdateBadScore()
+    {
+        badFood++;
+        badScore.text = "Bad Food: " + badFood.ToString();
     }
 }

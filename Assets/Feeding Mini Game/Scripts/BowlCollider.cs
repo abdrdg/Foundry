@@ -10,11 +10,12 @@ public class BowlCollider : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Good Food"))
         {
-            gameManager.UpdateScore();
+            gameManager.UpdateGoodScore();
             Destroy(collision.gameObject);          
         }
         else if (collision.gameObject.CompareTag("Bad Food"))
         {
+            gameManager.UpdateBadScore();
             Destroy(collision.gameObject);
         }
         else
