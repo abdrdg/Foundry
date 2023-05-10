@@ -439,7 +439,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -526,8 +526,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541546741}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 10, y: 4, z: 0}
-  m_LocalScale: {x: 2, y: 1000, z: 1}
+  m_LocalPosition: {x: -0, y: 4, z: 0}
+  m_LocalScale: {x: 2, y: 25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -572,6 +572,7 @@ GameObject:
   - component: {fileID: 557853493}
   - component: {fileID: 557853492}
   - component: {fileID: 557853494}
+  - component: {fileID: 557853495}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Player
@@ -639,7 +640,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557853489}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.62, y: 0, z: 0}
+  m_LocalPosition: {x: -8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -707,6 +708,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &557853495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557853489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6bb3ea20ae8c8479f598ab07d4a336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mousePosition: {x: 0, y: 0}
+  Dog: {fileID: 0}
+  lerpTime: 1
+  Distance: 0
+  MoveThreshold: 0
+  _previousPosition: {x: 0, y: 0, z: 0}
+  _currentPosition: {x: 0, y: 0, z: 0}
+  timer: 0
 --- !u!1 &616133119
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,7 +775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &748924507
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -852,11 +873,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnPos:
-  - {fileID: 541546741}
-  - {fileID: 1335354969}
-  - {fileID: 787359798}
-  - {fileID: 2040063403}
-  - {fileID: 818484899}
+  - {fileID: 1667367328}
+  - {fileID: 213626689}
+  - {fileID: 883722704}
+  - {fileID: 400793960}
+  - {fileID: 616133119}
   GL: 0
   lane: 0
   iter: 0
@@ -893,7 +914,7 @@ GameObject:
   - component: {fileID: 787359799}
   - component: {fileID: 787359801}
   m_Layer: 0
-  m_Name: Line blue
+  m_Name: Lane blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -959,8 +980,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787359798}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 10, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 1000, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -990,7 +1011,7 @@ GameObject:
   - component: {fileID: 818484901}
   - component: {fileID: 818484900}
   m_Layer: 0
-  m_Name: Line pink
+  m_Name: Lane pink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1068,8 +1089,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818484899}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 10, y: -4, z: 0}
-  m_LocalScale: {x: 2, y: 1000, z: 1}
+  m_LocalPosition: {x: 0, y: -4, z: 0}
+  m_LocalScale: {x: 2, y: 25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1125,7 +1146,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &932924927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1133,7 +1154,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932924926}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c6bb3ea20ae8c8479f598ab07d4a336, type: 3}
   m_Name: 
@@ -1353,7 +1374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &978661884
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1635,7 +1656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1304373774
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1781,8 +1802,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335354969}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 10, y: 2, z: 0}
-  m_LocalScale: {x: 2, y: 1000, z: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 2, y: 25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1911,7 +1932,7 @@ GameObject:
   - component: {fileID: 2040063405}
   - component: {fileID: 2040063404}
   m_Layer: 0
-  m_Name: Line green
+  m_Name: Lane green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1989,8 +2010,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040063403}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 10, y: -2, z: 0}
-  m_LocalScale: {x: 2, y: 1000, z: 1}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalScale: {x: 2, y: 25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

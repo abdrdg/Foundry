@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class FollowTouch : MonoBehaviour
 {
+    public Vector2 holder;
     public Vector2 mousePosition;
     public GameObject Dog;
 
@@ -15,6 +16,8 @@ public class FollowTouch : MonoBehaviour
     public Vector3 _previousPosition;
     public Vector3 _currentPosition;
     public float timer;
+
+    private float yAxis;
     void Start()
     {
         
@@ -23,11 +26,14 @@ public class FollowTouch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        holder = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        yAxis = holder.y;
+        mousePosition.x = gameObject.transform.position.x;
+        mousePosition.y = yAxis;
 
-        this.gameObject.transform.position = mousePosition;
+        gameObject.transform.position = mousePosition;
 
-        _currentPosition = this.gameObject.transform.position;
+        //_currentPosition = this.gameObject.transform.position;
 
 
 
@@ -41,22 +47,22 @@ public class FollowTouch : MonoBehaviour
         //float perc = currentLerpTime / lerpTime;
         //perc = perc * perc * perc * (perc * (6f * perc - 15f) + 10f);
 
-        if (_previousPosition != _currentPosition)
+        //if (_previousPosition != _currentPosition)
+        //{
+        //    timer += Time.deltaTime;
+
+        //    if (timer > 0.5f)
+        //    {
+        //        _previousPosition = _currentPosition;
+        //        timer = 0;
+        //    }
+        //}
+
+        if (Dog != null)
         {
-            timer += Time.deltaTime;
 
-            if (timer > 0.5f)
-            {
-                _previousPosition = _currentPosition;
-                timer = 0;
-            }
-        }
-
-        if(Dog != null)
-        {
-
-            Distance = Mathf.Sqrt((Dog.transform.position.x - this.transform.position.x) * (Dog.transform.position.x - this.transform.position.x)
-                + (Dog.transform.position.y - this.transform.position.y) * (Dog.transform.position.y - this.transform.position.y));
+            //Distance = Mathf.Sqrt((Dog.transform.position.x - this.transform.position.x) * (Dog.transform.position.x - this.transform.position.x)
+            //    + (Dog.transform.position.y - this.transform.position.y) * (Dog.transform.position.y - this.transform.position.y));
 
             Dog.transform.position = Vector3.MoveTowards(Dog.transform.position, _previousPosition, 2f * Time.deltaTime);
         }
