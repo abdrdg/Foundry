@@ -511,8 +511,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fb344eb7a73c6e49b4e756196884885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timerRef: {fileID: 0}
+  timer: {fileID: 0}
   showntime: 30
   time: 0
+  _gameOverUI: {fileID: 0}
+  _playAgainButton: {fileID: 0}
+  _isAgilityClear: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1810,6 +1815,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1390576124}
   - component: {fileID: 1390576125}
+  - component: {fileID: 1390576126}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1856,6 +1862,25 @@ MonoBehaviour:
   MovePower: 2
   mousePosition: {x: 0, y: 0}
   _positionToMove: {x: 0, y: 0, z: 0}
+--- !u!114 &1390576126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390576123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb344eb7a73c6e49b4e756196884885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timerRef: {fileID: 430573787}
+  timer: {fileID: 430573789}
+  showntime: 30
+  time: 0
+  _gameOverUI: {fileID: 1087665731}
+  _playAgainButton: {fileID: 129457736}
+  _isAgilityClear: 0
 --- !u!1 &1667367328
 GameObject:
   m_ObjectHideFlags: 0

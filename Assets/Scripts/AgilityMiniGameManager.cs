@@ -22,35 +22,33 @@ public class AgilityMiniGameManager : MonoBehaviour
     {
         Dog = GameObject.FindGameObjectWithTag("Player");
         _positionToMove = new Vector3(Dog.transform.position.x, Dog.transform.position.y, Dog.transform.position.z);
+        Time.timeScale = 1.0f;
     }
 
     public void Update()
     {
+        #region GameLoop 
         if (Dog != null)
         {
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             if (Input.GetMouseButton(0))
             {
-                // Move dog upwards based on position of cursor if it's on top
-                if (mousePosition.y < Dog.transform.position.y /*&& Dog.transform.position.y > -Yoffset*/)
+               
+                if (mousePosition.y < Dog.transform.position.y)
                 {
                     _positionToMove = new Vector3(Dog.transform.position.x, mousePosition.y, Dog.transform.position.z);
 
                 }
-                // Move dog downwards based on position of cursor if it's below
-                else if (mousePosition.y > Dog.transform.position.y /*&& Dog.transform.position.y < Yoffset*/)
+               
+                else if (mousePosition.y > Dog.transform.position.y)
                 {
                     _positionToMove = new Vector3(Dog.transform.position.x, mousePosition.y, Dog.transform.position.z);
                 }
-            }
-            //if (Input.GetMouseButton(1))
-            //{
-            //    _positionToMove = mousePosition;
-            //}
-                
+            }   
             Dog.transform.position = Vector3.MoveTowards(Dog.transform.position, _positionToMove, 2f * Time.deltaTime);//moves the dog 
         }
+        #endregion 
     }
 
 }
