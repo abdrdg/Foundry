@@ -5,7 +5,7 @@ public class AgilityScoring : MonoBehaviour
 {
     public GameObject ScoreUI;
   
-    public int scoreToGive = 100;
+    public int scoreToGive = 1;
     // Start is called before the first frame update
 
     private void Awake()
