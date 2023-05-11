@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class FoodData : ScriptableObject
+public class FoodData : MonoBehaviour 
 {
-    public Sprite sprite;
-    public float points;
-    public string type;
+    public bool isHit;
+    
+
+    
+
 }
