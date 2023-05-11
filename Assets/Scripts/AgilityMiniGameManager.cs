@@ -15,8 +15,6 @@ public class AgilityMiniGameManager : MonoBehaviour
     public float MovePower = 2f;
     public Vector2 mousePosition;
 
-    //float Yoffset = 2.5f;
-
     public Vector3 _positionToMove;
     void Awake()
     {
