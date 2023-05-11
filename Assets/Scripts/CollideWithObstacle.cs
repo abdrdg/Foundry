@@ -23,6 +23,7 @@ public class CollideWithObstacle : MonoBehaviour
 
                 _gameOverUI.SetActive(true);
                 _playAgainButton.SetActive(true);
+                Time.timeScale = 0.0f;
             }
         }
     }
