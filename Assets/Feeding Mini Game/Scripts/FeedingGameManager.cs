@@ -92,9 +92,12 @@ public class FeedingGameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Draw");
+            Debug.Log("Lose");
+            loseText.enabled = true;
+            TurnOffOtherUI();
         }
     }
+    
     public void TurnOffOtherUI()
     {
         goodScore.enabled = false;
