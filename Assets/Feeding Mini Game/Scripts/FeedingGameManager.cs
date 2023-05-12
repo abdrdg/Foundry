@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class FeedingGameManager : MonoBehaviour
 {
@@ -15,12 +16,16 @@ public class FeedingGameManager : MonoBehaviour
     public TMP_Text goodScore;
     public TMP_Text Timer;
     public TMP_Text badScore;
-    public Canvas button;
+    public TMP_Text winText;
+    public TMP_Text loseText;
+    public Button button;
 
     private void Start()
     {
         Time.timeScale = 1;
-        //button.gameObject.SetActive(false);
+        winText.enabled = false;
+        loseText.enabled = false;
+        button.gameObject.SetActive(false);
     }
 
     void Update()
@@ -45,7 +50,7 @@ public class FeedingGameManager : MonoBehaviour
                 Timer.text = "00:00";
                 Stop = true;
                 Time.timeScale = 0;
-                //button.gameObject.SetActive(true);
+                button.gameObject.SetActive(true);
                 WinLoseConditions();
             }
         }
@@ -55,9 +60,9 @@ public class FeedingGameManager : MonoBehaviour
         }
     }
 
-    public void outOfTime()
+    public void OutOfTime()
     {
-        SceneManager.LoadScene("FoodBowl");
+        SceneManager.LoadScene("Feeding");
     }
 
     public void UpdateGoodScore()
@@ -73,13 +78,28 @@ public class FeedingGameManager : MonoBehaviour
 
     public void WinLoseConditions()
     {
-        if(goodFood>badFood)
+        if (goodFood > badFood)
         {
             Debug.Log("Win");
+            winText.enabled = true;         
+            TurnOffOtherUI();
         }
-        else if(goodFood<badFood)
+        else if (goodFood < badFood)
         {
             Debug.Log("Lose");
+            loseText.enabled = true;
+            TurnOffOtherUI();
+        }
+        else
+        {
+            Debug.Log("Draw");
         }
     }
+    public void TurnOffOtherUI()
+    {
+        goodScore.enabled = false;
+        Timer.enabled = false;
+        badScore.enabled = false;
+    }
+
 }
