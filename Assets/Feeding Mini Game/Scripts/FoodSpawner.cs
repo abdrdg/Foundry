@@ -15,35 +15,8 @@ public class FoodSpawner : MonoBehaviour
         Vector3 pos = Camera.main.ViewportToWorldPoint(new Vector3(UnityEngine.Random.Range(0.1f, 0.9f), 4.36f, 0));
         pos.z = 0.0f;
 
-        goodPool = new ObjectPool<GameObject>(() =>
-        {
-            return Instantiate(foods[1], pos, Quaternion.identity);
-        }, food =>
-        {
-            food.gameObject.SetActive(true);
-            
-        }, food =>
-        {
-            food.gameObject.SetActive(false);
-        }, food =>
-        {
-            Destroy(food);
-        }, false, 1, 2);
-
-        badPool = new ObjectPool<GameObject>(() =>
-        {
-            return Instantiate(foods[0], pos, Quaternion.identity);
-        }, food =>
-        {
-            food.gameObject.SetActive(true);
-
-        }, food =>
-        {
-            food.gameObject.SetActive(false);
-        }, food =>
-        {
-            Destroy(food);
-        }, false, 1, 2);
+        goodPool = CreatePool(pos, foods[1]);
+        badPool = CreatePool(pos, foods[0]);
 
         StartCoroutine(Spawner());
     }
@@ -86,6 +59,25 @@ public class FoodSpawner : MonoBehaviour
        
     }
 
+    public ObjectPool<GameObject> CreatePool(Vector3 pos, GameObject Objectprefab)
+    {
+       var pool = new ObjectPool<GameObject>(() =>
+        {
+            return Instantiate(Objectprefab, pos, Quaternion.identity);
+        }, food =>
+        {
+            food.gameObject.SetActive(true);
+
+        }, food =>
+        {
+            food.gameObject.SetActive(false);
+        }, food =>
+        {
+            Destroy(food);
+        }, false, 1, 2);
+
+        return pool;
+    }
     
 
     
