@@ -13,6 +13,7 @@ public class FeedingGameManager : MonoBehaviour
     private bool Active = true;
     private bool Stop = false;
     public static FeedingGameManager timer;
+    public AudioSource BGM;
     public TMP_Text goodScore;
     public TMP_Text Timer;
     public TMP_Text badScore;
@@ -26,6 +27,7 @@ public class FeedingGameManager : MonoBehaviour
         winText.enabled = false;
         loseText.enabled = false;
         button.gameObject.SetActive(false);
+        BGM.Play();
     }
 
     void Update()
@@ -51,6 +53,7 @@ public class FeedingGameManager : MonoBehaviour
                 Stop = true;
                 Time.timeScale = 0;
                 button.gameObject.SetActive(true);
+                BGM.Stop();
                 WinLoseConditions();
             }
         }
