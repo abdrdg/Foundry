@@ -53,7 +53,6 @@ public class FeedingGameManager : MonoBehaviour
                 Stop = true;
                 Time.timeScale = 0;
                 button.gameObject.SetActive(true);
-                BGM.Stop();
                 WinLoseConditions();
             }
         }
