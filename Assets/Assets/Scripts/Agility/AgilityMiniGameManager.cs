@@ -10,7 +10,6 @@ public class AgilityMiniGameManager : MonoBehaviour
     public List<GameObject> Lanes;
 
     public float lerpTime = 1f;
-
     public float Distance;
     public float MovePower = 2f;
     public Vector2 mousePosition;
