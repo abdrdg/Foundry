@@ -64,7 +64,7 @@ public class FeedingGameManager : MonoBehaviour
 
     public void OutOfTime()
     {
-        SceneManager.LoadScene("Feeding");
+        SceneManager.LoadScene(0);
     }
 
     public void UpdateGoodScore()
