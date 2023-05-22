@@ -13,4 +13,9 @@ public class PApress : MonoBehaviour
         SceneManager.LoadScene("Agility");
     }
 
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
 }
