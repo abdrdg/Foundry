@@ -42,7 +42,8 @@ public class Spawner : MonoBehaviour
 
     void Spawn()
     {
-        GameObject thing = Instantiate(Obstac, alpha.transform.position, Quaternion.Euler(0, 0, 90));
+        
+        GameObject thing = Instantiate(Obstac, alpha.transform.position, Quaternion.Euler(0, 0, 0));
         iter = rng;//what lane has spawned
     }
 
