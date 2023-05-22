@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Breed: Pug
   Health: 100
-  DogPrefab: {fileID: 0}
+  DogPrefab: {fileID: 2587997337620452097, guid: ae4e98a7e852ec34e9a0c86159dd5594, type: 3}
   Energy: 12
   Hunger: 2
   Speed: 5
