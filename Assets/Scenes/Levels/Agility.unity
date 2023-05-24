@@ -459,7 +459,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &400793960
 GameObject:
@@ -917,6 +917,7 @@ MonoBehaviour:
   _gameOverUI: {fileID: 1087665731}
   _playAgainButton: {fileID: 129457736}
   _liveCounter: {fileID: 1778373801}
+  _gm: {fileID: 0}
   _bgm: {fileID: 335947274}
 --- !u!61 &557853493
 BoxCollider2D:
@@ -2159,7 +2160,7 @@ GameObject:
   - component: {fileID: 1390576126}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2203,6 +2204,10 @@ MonoBehaviour:
   MovePower: 2
   mousePosition: {x: 0, y: 0}
   _positionToMove: {x: 0, y: 0, z: 0}
+  Heart: {fileID: 5737806436937641604, guid: eac3412968a2c8f4b9c0bd5ae2ba601a, type: 3}
+  LiveSprites: []
+  _maxLives: 3
+  _curLives: 0
 --- !u!114 &1390576126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2441,7 +2446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1778373802
 RectTransform:
   m_ObjectHideFlags: 0

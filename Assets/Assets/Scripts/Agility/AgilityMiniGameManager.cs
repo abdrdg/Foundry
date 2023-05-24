@@ -15,11 +15,27 @@ public class AgilityMiniGameManager : MonoBehaviour
     public Vector2 mousePosition;
 
     public Vector3 _positionToMove;
+
+    public GameObject Heart;
+
+    public List<GameObject> LiveSprites;
+
+    public int _maxLives = 3;
+    public int _curLives;
+
     void Awake()
     {
+        _curLives = _maxLives;
         Dog = GameObject.FindGameObjectWithTag("Player");
         _positionToMove = new Vector3(Dog.transform.position.x, Dog.transform.position.y, Dog.transform.position.z);
         Time.timeScale = 1.0f;
+
+        for (int i = 0; i < _maxLives; i++)
+        {
+            LiveSprites.Add(Instantiate(Heart, new Vector3(-8.5f + i, 4,
+                transform.position.z), Quaternion.identity));
+            
+        }
     }
 
     public void Update()
@@ -46,6 +62,11 @@ public class AgilityMiniGameManager : MonoBehaviour
             Dog.transform.position = Vector3.MoveTowards(Dog.transform.position, _positionToMove, 2f * Time.deltaTime);//moves the dog 
         }
         #endregion 
+    }
+
+    public void TakeDamage()
+    {
+        Destroy(LiveSprites[_curLives - 1]);
     }
 
 }
