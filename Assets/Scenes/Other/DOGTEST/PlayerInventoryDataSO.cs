@@ -5,5 +5,5 @@ using UnityEngine;
 public class PlayerInventoryDataSO : ScriptableObject
 {
     [SerializeField]
-    public List<GameObject> Dogs;
+    public List<Dog> OwnedDogs;
 }

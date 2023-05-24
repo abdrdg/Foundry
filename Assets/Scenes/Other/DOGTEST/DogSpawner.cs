@@ -8,9 +8,9 @@ public class DogSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        foreach (GameObject dog in playerInventory.Dogs)
+        foreach (Dog ownedDog in playerInventory.OwnedDogs)
         {
-            Instantiate(dog);
+            Instantiate(ownedDog);
         }
     }
 }

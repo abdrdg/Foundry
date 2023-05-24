@@ -1,18 +1,32 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName ="Scriptable Objects/DogDataSO")]
 public class DogDataSO : ScriptableObject
 {
     [SerializeField]
-    private string Breed;
+    public string Breed;
     [SerializeField]
-    private float Health;
+    public float Health;
     [SerializeField]
-    public GameObject DogPrefab;
+    public Sprite DogSprite;
     [SerializeField]
-    private float Energy;
+    public float Energy;
     [SerializeField]
-    private float Hunger;
+    public float Hunger;
     [SerializeField]
-    private float Speed;
+    public float Speed;
+    [SerializeField]
+    public string DogName;
+
+    void OnEnable()
+    {
+        DogName = GenerateName();
+    }
+    private string GenerateName()
+    {
+        List<string> dogNames = new List<string>{"Allan", "Khim", "JP", "John", "Daintsu"};
+        return dogNames[Random.Range(0, dogNames.Count)];
+    }
+        
 }
