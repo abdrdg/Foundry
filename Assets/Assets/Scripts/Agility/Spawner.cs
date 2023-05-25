@@ -32,17 +32,14 @@ public class Spawner : MonoBehaviour
 
         if (spawnTimer > SpawnDelay)
         {
-           CheckRedund();
+            CheckRedund();
             Spawn();
-            Debug.Log(iter);
-            Debug.Log(lane);
             spawnTimer = 0;
         }
     }
 
     void Spawn()
     {
-        
         GameObject thing = Instantiate(Obstac, alpha.transform.position, Quaternion.Euler(0, 0, 0));
         iter = rng;//what lane has spawned
     }
