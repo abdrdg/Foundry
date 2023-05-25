@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour
     public int lane = 0;
     public int iter = 0;
     protected int rng;
+    protected int obstacNum;
 
     public GameObject Obstac;
 
@@ -18,10 +19,12 @@ public class Spawner : MonoBehaviour
     private float SpawnDelay = 2.5f;
 
     private GameObject alpha;
+
+    
     void Start()
     {
-        PosRand();
-        Spawn();
+        ObstacleRNG();
+        TestMultiObstac();
     }
 
     // Update is called once per frame
@@ -32,8 +35,10 @@ public class Spawner : MonoBehaviour
 
         if (spawnTimer > SpawnDelay)
         {
-            CheckRedund();
-            Spawn();
+            //checkredund();
+            //spawn();
+            ObstacleRNG();
+            TestMultiObstac();
             spawnTimer = 0;
         }
     }
@@ -57,5 +62,19 @@ public class Spawner : MonoBehaviour
         rng = Random.Range(0, 4);
         alpha = SpawnPos[rng];
         lane = rng;
+    }
+
+    void ObstacleRNG()
+    {
+        obstacNum = Random.Range(0, 5);
+    }
+
+    void TestMultiObstac()
+    {
+        for (int i = 0; i < obstacNum; i++)
+        {
+            CheckRedund();
+            Spawn();
+        }
     }
 }
