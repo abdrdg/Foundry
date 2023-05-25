@@ -12,9 +12,7 @@ public class AgilityMiniGameManager : MonoBehaviour
     public float lerpTime = 1f;
     public float Distance;
     public float MovePower = 2f;
-    public Vector2 mousePosition;
-
-    public Vector3 _positionToMove;
+    public Vector2 mousePosition, _positionToMove;
 
     public GameObject Heart;
 
@@ -51,14 +49,14 @@ public class AgilityMiniGameManager : MonoBehaviour
                 if (mousePosition.y < Dog.transform.position.y)
                 {
                     _positionToMove = new Vector3(Dog.transform.position.x, mousePosition.y, Dog.transform.position.z);
-
                 }
                
                 else if (mousePosition.y > Dog.transform.position.y)
                 {
                     _positionToMove = new Vector3(Dog.transform.position.x, mousePosition.y, Dog.transform.position.z);
                 }
-            }   
+            }
+            _positionToMove.y = Mathf.Clamp(_positionToMove.y, -4f, 2.2f);
             Dog.transform.position = Vector3.MoveTowards(Dog.transform.position, _positionToMove, 2f * Time.deltaTime);//moves the dog 
         }
         #endregion 
