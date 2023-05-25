@@ -66,7 +66,7 @@ public class Spawner : MonoBehaviour
 
     void PosRand()//random lane
     {
-        rng = Random.Range(0, 4);
+        rng = Random.Range(0, 5);
         alpha = SpawnPos[rng];
         lane = rng;
     }
