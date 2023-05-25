@@ -5,41 +5,48 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public List<GameObject> SpawnPos = new List<GameObject>();
-
-    public bool GL = false;
     
     public int lane = 0;
     public int iter = 0;
-    protected int rng;
-    protected int obstacNum;
+    protected int rng, obstacNum;
 
     public GameObject Obstac;
 
     private float spawnTimer = 0;
-    private float SpawnDelay = 2.5f;
+    private float SpawnDelay = 2.5f, time;
 
     private GameObject alpha;
 
     
     void Start()
     {
-        ObstacleRNG();
-        TestMultiObstac();
+        PosRand();
+        Spawn();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //lanes.Clear();
+        time += Time.deltaTime; 
         spawnTimer += Time.deltaTime;//time counter
 
-        if (spawnTimer > SpawnDelay)
+        if (time < 15)
         {
-            //checkredund();
-            //spawn();
-            ObstacleRNG();
-            TestMultiObstac();
-            spawnTimer = 0;
+            if (spawnTimer > SpawnDelay)
+            {
+                CheckRedund();
+                Spawn();
+                spawnTimer = 0;
+            }
+        }
+        else
+        {
+            if (spawnTimer > SpawnDelay)
+            {
+                ObstacleRNG();
+                SpawnMultiObstac();
+                spawnTimer = 0;
+            }
         }
     }
 
@@ -66,10 +73,10 @@ public class Spawner : MonoBehaviour
 
     void ObstacleRNG()
     {
-        obstacNum = Random.Range(0, 5);
+        obstacNum = Random.Range(2, 5);
     }
 
-    void TestMultiObstac()
+    void SpawnMultiObstac()
     {
         for (int i = 0; i < obstacNum; i++)
         {
