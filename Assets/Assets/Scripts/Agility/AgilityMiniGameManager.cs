@@ -30,7 +30,7 @@ public class AgilityMiniGameManager : MonoBehaviour
 
         for (int i = 0; i < _maxLives; i++)
         {
-            LiveSprites.Add(Instantiate(Heart, new Vector3(-11.0f + i, 5,
+            LiveSprites.Add(Instantiate(Heart, new Vector3(-9.85f + i, 5,
                 transform.position.z), Quaternion.identity));
             
         }
