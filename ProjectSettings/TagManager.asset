@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Good Food
   - Bad Food
+  - Obstacle
+  - ScoreUI
   layers:
   - Default
   - TransparentFX
