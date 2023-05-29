@@ -9,29 +9,28 @@ public class FoodSpawner : MonoBehaviour
     public ObjectPool<GameObject> goodPool;
     public ObjectPool<GameObject> badPool;
     public GameObject foodGetter;
+
+    private int goodFoodWeight = 1;
+    private int badFoodWeight = 1;
+
+    [SerializeField] private int spawnTimeInterval = 3;
     // Start is called before the first frame update
     void Start()
     {
         Vector3 pos = Camera.main.ViewportToWorldPoint(new Vector3(UnityEngine.Random.Range(0.1f, 0.9f), 4.36f, 0));
         pos.z = 0.0f;
 
-        goodPool = CreatePool(pos, foods[1],1,2);
-        badPool = CreatePool(pos, foods[0],1,2);
+        goodPool = CreatePool(pos, foods[1], 1, 2);
+        badPool = CreatePool(pos, foods[0], 1, 2);
 
         StartCoroutine(Spawner());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     IEnumerator Spawner()
     {
         while (true)
         {
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(spawnTimeInterval);
             CreateItems();
         }
     }
@@ -41,44 +40,43 @@ public class FoodSpawner : MonoBehaviour
         Vector3 pos = Camera.main.ViewportToWorldPoint(new Vector3(UnityEngine.Random.Range(0.1f, 0.9f), 4.36f, 0));
         pos.z = 0.0f;
 
-        var randomFood = Random.Range(0, 10);
-
-        if(randomFood<6)
+        int totalWeight = goodFoodWeight + badFoodWeight;
+        var randomFood = Random.Range(0, totalWeight - 1);
+                
+        if (randomFood < goodFoodWeight)
         {
+            badFoodWeight++;
             var goodfood = goodPool.Get();
             goodfood.transform.position = pos;
         }
-        else if(randomFood>=6)
+        else
         {
+            goodFoodWeight++;
             var badfood = badPool.Get();
             badfood.transform.position = pos;
         }
-        
-
-        //Instantiate(food, pos, Quaternion.identity);
-       
     }
 
     public ObjectPool<GameObject> CreatePool(Vector3 pos, GameObject Objectprefab, int minAmount, int maxAmount)
     {
-       var pool = new ObjectPool<GameObject>(() =>
-        {
-            return Instantiate(Objectprefab, pos, Quaternion.identity);
-        }, food =>
-        {
-            food.gameObject.SetActive(true);
+        var pool = new ObjectPool<GameObject>(() =>
+         {
+             return Instantiate(Objectprefab, pos, Quaternion.identity);
+         }, food =>
+         {
+             food.gameObject.SetActive(true);
 
-        }, food =>
-        {
-            food.gameObject.SetActive(false);
-        }, food =>
-        {
-            Destroy(food);
-        }, false, minAmount, maxAmount);
+         }, food =>
+         {
+             food.gameObject.SetActive(false);
+         }, food =>
+         {
+             Destroy(food);
+         }, false, minAmount, maxAmount);
 
         return pool;
     }
-    
 
-    
+
+
 }
