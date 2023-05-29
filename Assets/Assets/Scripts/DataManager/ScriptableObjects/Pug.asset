@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be4d7e343a0891e4a91823af0297249d, type: 3}
-  m_Name: Bulldog
+  m_Name: Pug
   m_EditorClassIdentifier: 
-  _dogType: BullDog
+  _dogType: Pug
   _dogName: 
-  _obedience: 12
-  _beauty: 23
-  _agility: 2312
-  _health: 1
-  _energy: 201
-  _mood: 3
+  _obedience: 0
+  _beauty: 0
+  _agility: 0
+  _health: 0
+  _energy: 0
+  _mood: 0
   _image: {fileID: 0}

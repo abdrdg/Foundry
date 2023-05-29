@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00001312, y: -0.0000019073}
-  m_SizeDelta: {x: 24.3215, y: 7.4849}
+  m_AnchoredPosition: {x: -0.000012398, y: -0.00000054299}
+  m_SizeDelta: {x: 47, y: 7.4849}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &61831502
 MonoBehaviour:
@@ -181,19 +181,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Feeding
-
-'
+  m_text: Obedience
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9c2f3b31f490da54889e7f915b7e69f4, type: 2}
+  m_sharedMaterial: {fileID: 1613020923268799113, guid: 9c2f3b31f490da54889e7f915b7e69f4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -210,15 +208,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5
-  m_fontSizeBase: 5
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -246,7 +244,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0.81000805, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -298,7 +296,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 293.59998, y: 41.770004}
+  m_AnchoredPosition: {x: 61.861053, y: 42.59421}
   m_SizeDelta: {x: 11.5254, y: 12.8877}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &66803635
@@ -344,7 +342,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 66803636}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 200412224}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &66803636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1554,7 +1564,7 @@ GameObject:
   - component: {fileID: 354748033}
   - component: {fileID: 354748032}
   m_Layer: 5
-  m_Name: Button
+  m_Name: CloseButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1624,7 +1634,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 354748033}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 200412224}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &354748033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1833,7 +1855,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &410955295
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2050,7 +2072,7 @@ GameObject:
   - component: {fileID: 447302967}
   - component: {fileID: 447302966}
   m_Layer: 0
-  m_Name: Obedience (1)
+  m_Name: Obedience
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2131,6 +2153,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: SampleScene
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 200412224}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &447302967
@@ -2345,7 +2379,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200.63892, y: -1.6241989}
+  m_AnchoredPosition: {x: -31.100006, y: -0.79999924}
   m_SizeDelta: {x: 61.7742, y: 13.4675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &503750761
@@ -2402,6 +2436,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Agility
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 200412224}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &503750762
@@ -2746,8 +2792,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2827,7 +2873,7 @@ GameObject:
   - component: {fileID: 624548775}
   - component: {fileID: 624548774}
   m_Layer: 0
-  m_Name: Grooming (1)
+  m_Name: 'Grooming '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2908,6 +2954,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: SampleScene
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 200412224}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &624548775
@@ -3139,7 +3197,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 267.9414, y: -0.2961998}
+  m_AnchoredPosition: {x: 36.202484, y: 0.5280113}
   m_SizeDelta: {x: 199.6855, y: 162.6569}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &687804952
@@ -3205,7 +3263,7 @@ GameObject:
   - component: {fileID: 714970319}
   - component: {fileID: 714970318}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: DogStatsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3558,7 +3616,7 @@ GameObject:
   - component: {fileID: 820334613}
   - component: {fileID: 820334612}
   m_Layer: 0
-  m_Name: Agility  (1)
+  m_Name: Agility
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3639,6 +3697,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Agility
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 200412224}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &820334613
@@ -3748,8 +3818,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3964,7 +4034,7 @@ GameObject:
   - component: {fileID: 1008812976}
   - component: {fileID: 1008812979}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: DogInfoCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4385,15 +4455,15 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9c2f3b31f490da54889e7f915b7e69f4, type: 2}
+  m_sharedMaterial: {fileID: 1613020923268799113, guid: 9c2f3b31f490da54889e7f915b7e69f4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4410,15 +4480,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5
-  m_fontSizeBase: 5
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4657,15 +4727,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Agility
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9c2f3b31f490da54889e7f915b7e69f4, type: 2}
+  m_sharedMaterial: {fileID: 1613020923268799113, guid: 9c2f3b31f490da54889e7f915b7e69f4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4682,15 +4752,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5
-  m_fontSizeBase: 5
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -5127,7 +5197,7 @@ GameObject:
   - component: {fileID: 1324283911}
   - component: {fileID: 1324283910}
   m_Layer: 0
-  m_Name: Agility Text (1)
+  m_Name: Agility Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5184,8 +5254,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5321,8 +5391,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5426,7 +5496,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200.63623, y: -34.3271}
+  m_AnchoredPosition: {x: -31.102692, y: -33.50289}
   m_SizeDelta: {x: 61.7742, y: 13.4675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1483559424
@@ -5483,6 +5553,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: SampleScene
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 200412224}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1483559425
@@ -5844,7 +5926,7 @@ GameObject:
   - component: {fileID: 1605121341}
   - component: {fileID: 1605121340}
   m_Layer: 0
-  m_Name: Feed (1)
+  m_Name: Feed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5925,6 +6007,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Feeding
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 200412224}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1605121341
@@ -6369,7 +6463,7 @@ GameObject:
   - component: {fileID: 1952965417}
   - component: {fileID: 1952965419}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: DogInfoPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6399,7 +6493,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -3.1992188, y: 3.5}
-  m_SizeDelta: {x: -204.71002, y: 95.119995}
+  m_SizeDelta: {x: -660.8205, y: 95.12}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1952965417
 MonoBehaviour:
@@ -6530,8 +6624,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00001312, y: -0.0000019073}
-  m_SizeDelta: {x: 24.3215, y: 7.4849}
+  m_AnchoredPosition: {x: -0.0000047684, y: 0.00000082132}
+  m_SizeDelta: {x: 43.048, y: 7.4849}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1966776516
 MonoBehaviour:
@@ -6553,19 +6647,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Frisbee
-
-'
+  m_text: Grooming
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9c2f3b31f490da54889e7f915b7e69f4, type: 2}
+  m_sharedMaterial: {fileID: 1613020923268799113, guid: 9c2f3b31f490da54889e7f915b7e69f4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6582,15 +6674,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5
-  m_fontSizeBase: 5
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -6821,7 +6913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200.63623, y: -18.2029}
+  m_AnchoredPosition: {x: -31.102692, y: -17.37869}
   m_SizeDelta: {x: 61.7742, y: 13.4675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2078935553
@@ -6878,6 +6970,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: SampleScene
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 200412224}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2078935554
@@ -7205,7 +7309,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200.63885, y: 14.744705}
+  m_AnchoredPosition: {x: -31.100067, y: 15.568916}
   m_SizeDelta: {x: 61.7742, y: 13.4675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2125506559
@@ -7262,6 +7366,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Feeding
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 200412224}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2125506560
