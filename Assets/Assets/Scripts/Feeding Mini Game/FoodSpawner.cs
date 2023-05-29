@@ -9,7 +9,7 @@ public class FoodSpawner : MonoBehaviour
     public ObjectPool<GameObject> goodPool;
     public ObjectPool<GameObject> badPool;
     public GameObject foodGetter;
-
+    public BowlCollider foodBowl;
     private int goodFoodWeight = 1;
     private int badFoodWeight = 1;
 
@@ -68,7 +68,9 @@ public class FoodSpawner : MonoBehaviour
 
          }, food =>
          {
+             
              food.gameObject.SetActive(false);
+             
          }, food =>
          {
              Destroy(food);

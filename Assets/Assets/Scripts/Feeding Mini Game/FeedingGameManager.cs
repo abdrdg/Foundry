@@ -20,7 +20,9 @@ public class FeedingGameManager : MonoBehaviour
     public TMP_Text winText;
     public TMP_Text loseText;
     public Button button;
-
+    public Sprite goodReact;
+    public Sprite badReact;
+    public bool changedSprite;
     private void Start()
     {
         Time.timeScale = 1;
@@ -70,12 +72,12 @@ public class FeedingGameManager : MonoBehaviour
     public void UpdateGoodScore()
     {
         goodFood++;
-        goodScore.text = "Good Food: " + goodFood.ToString();
+        goodScore.text = goodFood.ToString();
     }
     public void UpdateBadScore()
     {
         badFood++;
-        badScore.text = "Bad Food: " + badFood.ToString();
+        badScore.text = badFood.ToString();
     }
 
     public void WinLoseConditions()
