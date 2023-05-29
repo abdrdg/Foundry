@@ -31,6 +31,7 @@ public class FoodSpawner : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(spawnTimeInterval);
+            foodBowl.ChangeAnim();
             CreateItems();
         }
     }
@@ -39,6 +40,7 @@ public class FoodSpawner : MonoBehaviour
     {
         Vector3 pos = Camera.main.ViewportToWorldPoint(new Vector3(UnityEngine.Random.Range(0.1f, 0.9f), 4.36f, 0));
         pos.z = 0.0f;
+        
 
         int totalWeight = goodFoodWeight + badFoodWeight;
         var randomFood = Random.Range(0, totalWeight - 1);
