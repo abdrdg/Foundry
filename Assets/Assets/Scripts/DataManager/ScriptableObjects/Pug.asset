@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Pug
   m_EditorClassIdentifier: 
   _dogType: Pug
-  _dogName: 
-  _obedience: 0
-  _beauty: 0
-  _agility: 0
-  _health: 0
-  _energy: 0
-  _mood: 0
-  _image: {fileID: 0}
+  _dogName: Maya
+  _obedience: 69
+  _beauty: 69
+  _agility: 69
+  _health: 69
+  _energy: 69
+  _mood: 69
+  _image: {fileID: 21300000, guid: 21db44f84ea772d4d90f609ac982868a, type: 3}
