@@ -5,7 +5,7 @@ public class TriggerGrooming : MonoBehaviour
     public GameObject dog;
 
     public float _soapingProgression = 0;
-    private float _maxSoapingProgression = 100;
+    public float _maxSoapingProgression = 100;
     public float _soapSpeed;
 
     public void Update()
@@ -17,7 +17,7 @@ public class TriggerGrooming : MonoBehaviour
 
         if(_soapingProgression == _maxSoapingProgression )
         {
-            Debug.Log("Finish Soaping");
+            Debug.Log("Finish task");
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -39,6 +39,8 @@ public class TriggerGrooming : MonoBehaviour
                 if(_soapingProgression >= _maxSoapingProgression)
                 {
                     _soapingProgression = _maxSoapingProgression;
+                    collision.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+                    _soapingProgression = 0;
                 }
             }
         }
