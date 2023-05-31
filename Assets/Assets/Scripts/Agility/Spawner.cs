@@ -5,19 +5,19 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public List<GameObject> SpawnPos = new List<GameObject>();
-
-    public bool GL = false;
     
     public int lane = 0;
     public int iter = 0;
-    protected int rng;
+    protected int rng, obstacNum;
 
     public GameObject Obstac;
 
     private float spawnTimer = 0;
-    private float SpawnDelay = 2.5f;
+    private float SpawnDelay = 2.5f, time;
 
     private GameObject alpha;
+
+    
     void Start()
     {
         PosRand();
@@ -27,22 +27,31 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //lanes.Clear();
+        time += Time.deltaTime; 
         spawnTimer += Time.deltaTime;//time counter
 
-        if (spawnTimer > SpawnDelay)
+        if (time < 15)
         {
-           CheckRedund();
-            Spawn();
-            Debug.Log(iter);
-            Debug.Log(lane);
-            spawnTimer = 0;
+            if (spawnTimer > SpawnDelay)
+            {
+                CheckRedund();
+                Spawn();
+                spawnTimer = 0;
+            }
+        }
+        else
+        {
+            if (spawnTimer > SpawnDelay)
+            {
+                ObstacleRNG();
+                SpawnMultiObstac();
+                spawnTimer = 0;
+            }
         }
     }
 
     void Spawn()
     {
-        
         GameObject thing = Instantiate(Obstac, alpha.transform.position, Quaternion.Euler(0, 0, 0));
         iter = rng;//what lane has spawned
     }
@@ -57,8 +66,22 @@ public class Spawner : MonoBehaviour
 
     void PosRand()//random lane
     {
-        rng = Random.Range(0, 4);
+        rng = Random.Range(0, 5);
         alpha = SpawnPos[rng];
         lane = rng;
+    }
+
+    void ObstacleRNG()
+    {
+        obstacNum = Random.Range(2, 5);
+    }
+
+    void SpawnMultiObstac()
+    {
+        for (int i = 0; i < obstacNum; i++)
+        {
+            CheckRedund();
+            Spawn();
+        }
     }
 }

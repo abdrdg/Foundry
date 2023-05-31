@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 public class Timer : MonoBehaviour
 {
     public GameObject _timerRef;
@@ -9,6 +10,7 @@ public class Timer : MonoBehaviour
 
     public GameObject _gameOverUI;
     public GameObject _playAgainButton;
+  
 
     public bool _isAgilityClear = false;
     // Start is called before the first frame update
@@ -20,6 +22,8 @@ public class Timer : MonoBehaviour
         }
         timer = _timerRef.gameObject.GetComponent<TextMeshProUGUI>();
         timer.text = showntime.ToString();
+
+        
     }
 
     // Update is called once per frame
