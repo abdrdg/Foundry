@@ -6,7 +6,8 @@ public class PauseScript : MonoBehaviour
 {
     protected bool isPaused = false;
     public GameObject prefab;
-    public GameObject pause;
+    public GameObject gotoObject;
+    public GameObject pauseButton;
     public AudioSource _bgm;
 
     public void OnClick()
@@ -17,10 +18,10 @@ public class PauseScript : MonoBehaviour
             _bgm.Pause();
             isPaused = true;
 
-            GameObject pauseMenu = Instantiate(prefab,new Vector3(384,174,0),Quaternion.identity);
-            pauseMenu.transform.SetParent(pause.transform);
+            GameObject pauseMenu = Instantiate(prefab,new Vector3(0,0,0),Quaternion.identity);
+            pauseMenu.transform.SetParent(gotoObject.transform);
 
-            Debug.Log("Paused");
+            pauseButton.SetActive(false);
 
         
         }
@@ -29,6 +30,7 @@ public class PauseScript : MonoBehaviour
             Time.timeScale = 1.0f;
             _bgm.Play();
             isPaused = false;
+            pauseButton.SetActive(true);
         }
     }
 }
