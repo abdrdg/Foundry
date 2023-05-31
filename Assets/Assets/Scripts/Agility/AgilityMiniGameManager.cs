@@ -56,7 +56,7 @@ public class AgilityMiniGameManager : MonoBehaviour
                     _positionToMove = new Vector3(Dog.transform.position.x, mousePosition.y, Dog.transform.position.z);
                 }
             }
-            _positionToMove.y = Mathf.Clamp(_positionToMove.y, -5.2f, 3f);
+            _positionToMove.y = Mathf.Clamp(_positionToMove.y, -5.2f, 1.6f);
             Dog.transform.position = Vector3.MoveTowards(Dog.transform.position, _positionToMove, 2f * Time.deltaTime);//moves the dog 
         }
         #endregion 
