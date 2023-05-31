@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6e83bf9fbec91864a9391ab71fa26d1e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Soap: {fileID: 1470758824258739686, guid: 6f3e91a2d50ec254190a7b011245d869, type: 3}
+  - Shower: {fileID: 1470758824258739686, guid: c32ea0eebb60f934a9ec2991eb00bb12, type: 3}
+  - Dryer: {fileID: 2982792274115091436, guid: 76875a64d8c09164088065278af25480, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
