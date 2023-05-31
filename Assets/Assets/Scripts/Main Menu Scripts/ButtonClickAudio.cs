@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DogClickAudio : MonoBehaviour
+public class ButtonClickAudio : MonoBehaviour
 {
     public AudioClip clickSFX;
 

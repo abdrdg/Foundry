@@ -1,0 +1,23 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+public class PanelClose : MonoBehaviour
+{
+    public GameObject panelToClose;
+    public GameObject panelToOpen;
+    public GameObject dog;
+    private Button button;
+
+    private void Start()
+    {
+        button = GetComponent<Button>();
+        button.onClick.AddListener(SwitchPanels);
+    }
+
+    private void SwitchPanels()
+    {
+        panelToClose.SetActive(false);
+        panelToOpen.SetActive(true);
+        dog.SetActive(!dog.activeSelf);
+    }
+}
