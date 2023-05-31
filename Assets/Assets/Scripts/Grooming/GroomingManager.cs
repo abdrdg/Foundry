@@ -6,20 +6,34 @@ public class GroomingManager : MonoBehaviour
     public GameObject Shower;
     public GameObject Dryer;
     public GameObject Brush;
+
+    protected GameObject OnMouse;
     public void EquipSoap()
     {
-        Instantiate(Soap, transform.position, Quaternion.identity);
+        AntiStack();
+        OnMouse = Instantiate(Soap, transform.position, Quaternion.identity);
     }
     public void EquipShower()
     {
-        Instantiate(Shower, transform.position, Quaternion.identity);
+        AntiStack();
+        OnMouse = Instantiate(Shower, transform.position, Quaternion.identity);
     }
     public void EquipDryer()
     {
-        Instantiate(Dryer, transform.position, Quaternion.identity);
+        AntiStack();
+        OnMouse = Instantiate(Dryer, transform.position, Quaternion.identity);
     }
     public void EquipBrush()
     {
-        Instantiate(Dryer, transform.position, Quaternion.identity);
+        AntiStack();
+        OnMouse = Instantiate(Brush, transform.position, Quaternion.identity);
+    }
+
+    private void AntiStack()
+    {
+        if (OnMouse != null)
+        {
+            Destroy(OnMouse);
+        }
     }
 }

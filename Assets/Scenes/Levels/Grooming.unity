@@ -1343,7 +1343,7 @@ MonoBehaviour:
   Soap: {fileID: 1470758824258739686, guid: 6f3e91a2d50ec254190a7b011245d869, type: 3}
   Shower: {fileID: 1470758824258739686, guid: c32ea0eebb60f934a9ec2991eb00bb12, type: 3}
   Dryer: {fileID: 2982792274115091436, guid: 76875a64d8c09164088065278af25480, type: 3}
-  Brush: {fileID: 1470758824258739686, guid: 6f3e91a2d50ec254190a7b011245d869, type: 3}
+  Brush: {fileID: 1521580013448710506, guid: c161f9af28b1bb04f929fc68f21a356f, type: 3}
 --- !u!1 &1380671600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,7 +1697,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1284431756}
         m_TargetAssemblyTypeName: GroomingManager, Assembly-CSharp
-        m_MethodName: EquipDryer
+        m_MethodName: EquipBrush
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
