@@ -348,7 +348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 6766563593089562871, guid: 1f837484e2dd93b4cabd83272978f0f8, type: 3}
   gotoObject: {fileID: 2095707241}
-  pauseButton: {fileID: 0}
+  pauseButton: {fileID: 874703266}
   _bgm: {fileID: 335947274}
 --- !u!1 &335947273
 GameObject:
@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 335947274}
   m_Layer: 0
   m_Name: AgilityGameBGM
-  m_TagString: Untagged
+  m_TagString: AgilityBGM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1576,7 +1576,7 @@ GameObject:
   - component: {fileID: 874703268}
   m_Layer: 5
   m_Name: Pause
-  m_TagString: Untagged
+  m_TagString: Pause
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3578,7 +3578,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &2095707245
 RectTransform:
