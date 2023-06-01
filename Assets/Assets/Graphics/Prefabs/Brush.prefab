@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9074724165505054784}
   - component: {fileID: 6738677746998959687}
   - component: {fileID: 8167196781681421395}
+  - component: {fileID: -1006238360195942063}
   m_Layer: 0
   m_Name: Brush
   m_TagString: Untagged
@@ -146,3 +147,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20bbbd88fae0e8849932acfb6f1b3749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1006238360195942063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521580013448710506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c8f84cefeeb3b24baadfbf7367c6022, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dog: {fileID: 0}
+  _soapingProgression: 0
+  _maxSoapingProgression: 100
+  _soapSpeed: 0

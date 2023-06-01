@@ -3,11 +3,13 @@ using UnityEngine;
 public class TriggerGrooming : MonoBehaviour
 {
     public GameObject dog;
+    public GameObject manager;
 
     public float _soapingProgression = 0;
     public float _maxSoapingProgression = 100;
     public float _soapSpeed;
 
+    
     public void Update()
     {
         if(_soapingProgression > 0 && _soapingProgression != _maxSoapingProgression )
@@ -41,6 +43,8 @@ public class TriggerGrooming : MonoBehaviour
                     _soapingProgression = _maxSoapingProgression;
                     collision.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
                     _soapingProgression = 0;
+                    manager = GameObject.Find("Game Manager");
+                    manager.GetComponent<GroomingManager>().NextTool();
                 }
             }
         }
