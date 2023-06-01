@@ -8,7 +8,10 @@ public class GroomingManager : MonoBehaviour
     public GameObject Shower;
     public GameObject Dryer;
     public GameObject Brush;
-    public Animator curtain;
+    public GameObject curtain;
+
+    public Canvas _menuUI;
+
     public int stage = 1;
 
     private void Start()
@@ -18,7 +21,9 @@ public class GroomingManager : MonoBehaviour
 
     private void Update()
     {
-        
+        if(stage > 5) { 
+            _menuUI.gameObject.SetActive(true);
+        }
     }
 
     protected GameObject OnMouse;
@@ -53,8 +58,7 @@ public class GroomingManager : MonoBehaviour
 
     public void NextTool()
     {
-        curtain.SetBool("IsToolDone", true);
-        curtain.GetBool("IsToolDone");
+        curtain.GetComponent<Animator>().SetBool("IsToolDone", true);
         StartCoroutine(delay());
         stage += 1;
         switch (stage)
@@ -78,14 +82,13 @@ public class GroomingManager : MonoBehaviour
                 print("Incorrect intelligence level.");
                 break;
         }
-        curtain.SetBool("IsToolDone", false);
-        curtain.GetBool("IsToolDone");
     }
     IEnumerator delay()
     {
        
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(5);
+        curtain.GetComponent<Animator>().SetBool("IsToolDone", false);
 
     }
 
