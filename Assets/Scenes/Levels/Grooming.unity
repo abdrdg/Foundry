@@ -1711,7 +1711,7 @@ MonoBehaviour:
   Soap: {fileID: 1470758824258739686, guid: 6f3e91a2d50ec254190a7b011245d869, type: 3}
   Shower: {fileID: 1470758824258739686, guid: c32ea0eebb60f934a9ec2991eb00bb12, type: 3}
   Dryer: {fileID: 2982792274115091436, guid: 76875a64d8c09164088065278af25480, type: 3}
-  Brush: {fileID: 1521580013448710506, guid: c161f9af28b1bb04f929fc68f21a356f, type: 3}
+  Brush: {fileID: 1470758824258739686, guid: ec128b778abc43c4d836ac429037f359, type: 3}
   curtain: {fileID: 1327165063}
   _menuUI: {fileID: 1922564065}
   stage: 1
