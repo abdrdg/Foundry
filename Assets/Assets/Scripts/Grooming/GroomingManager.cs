@@ -59,6 +59,7 @@ public class GroomingManager : MonoBehaviour
     public void NextTool()
     {
         curtain.GetComponent<Animator>().SetBool("IsToolDone", true);
+        curtain.GetComponent<Animator>().SetBool("IsIdle", false);
         StartCoroutine(delay());
         stage += 1;
         switch (stage)
@@ -89,7 +90,7 @@ public class GroomingManager : MonoBehaviour
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(5);
         curtain.GetComponent<Animator>().SetBool("IsToolDone", false);
-
+        curtain.GetComponent<Animator>().SetBool("IsIdle", true);
     }
 
 }
