@@ -19,8 +19,7 @@ public class PauseMenuScript : MonoBehaviour
         Time.timeScale = 1.0f;
         _bgm.Play();
         pauseButton.SetActive(true);
-
-       Destroy(gameObject);
+        Destroy(gameObject);
     }
 
     public void Menu()

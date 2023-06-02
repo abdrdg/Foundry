@@ -430,6 +430,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a798439ea5ca3a42bdd0e715af292ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefab: {fileID: 5035389529152646536, guid: 4c00802f0c2220b40a82261a0153ee1a, type: 3}
+  gotoObject: {fileID: 2095707241}
+  pauseButton: {fileID: 844013598}
   _bgm: {fileID: 335947274}
 --- !u!1 &335947273
 GameObject:
@@ -443,7 +446,7 @@ GameObject:
   - component: {fileID: 335947274}
   m_Layer: 0
   m_Name: AgilityGameBGM
-  m_TagString: Untagged
+  m_TagString: AgilityBGM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1832,7 +1835,7 @@ GameObject:
   - component: {fileID: 844013602}
   m_Layer: 5
   m_Name: Pause
-  m_TagString: Untagged
+  m_TagString: Pause
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
