@@ -17,7 +17,7 @@ public class PauseScrip : MonoBehaviour
             _bgm.Pause();
             isPaused = true;
 
-            GameObject pauseMenu = Instantiate(prefab,new Vector3(549,262,0),Quaternion.identity);
+            GameObject pauseMenu = Instantiate(prefab,new Vector3(0,0,0),Quaternion.identity);
             pauseMenu.transform.SetParent(gotoObject.transform);
             pauseButton.SetActive(false);
     }
