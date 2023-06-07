@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,13 +17,18 @@ public class PauseMenuScript : MonoBehaviour
         Time.timeScale = 1.0f;
         _bgm.Play();
         pauseButton.SetActive(true);
-        Destroy(gameObject);
+        Invoke("DestroyObject", 0.1f);
     }
 
     public void Menu()
     {
         SceneManager.LoadScene(0);
         pauseButton.SetActive(true);
+        Invoke("DestroyObject", 0.1f);
+    }
+
+    private void DestroyObject()
+    {
         Destroy(gameObject);
     }
 }
