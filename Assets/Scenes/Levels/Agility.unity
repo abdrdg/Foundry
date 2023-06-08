@@ -3368,5 +3368,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: BGHolder
       objectReference: {fileID: 0}
+    - target: {fileID: 6633509088061436548, guid: a0e2dc3118cd9b344a7ad26c9cd2cb18, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0e2dc3118cd9b344a7ad26c9cd2cb18, type: 3}
