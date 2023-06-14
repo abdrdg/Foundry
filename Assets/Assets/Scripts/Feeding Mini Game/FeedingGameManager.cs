@@ -74,12 +74,12 @@ public class FeedingGameManager : MonoBehaviour
     public void UpdateGoodScore()
     {
         goodFood++;
-        goodScore.text = goodFood.ToString();
+        goodScore.text = ":" + goodFood.ToString();
     }
     public void UpdateBadScore()
     {
         badFood++;
-        badScore.text = badFood.ToString();
+        badScore.text = ":" + badFood.ToString();
     }
 
     public void WinLoseConditions()
