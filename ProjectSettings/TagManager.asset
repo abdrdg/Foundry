@@ -8,8 +8,9 @@ TagManager:
   - Bad Food
   - ScoreUI
   - Obstacle
-  - Pause
+  - Ground
   - AgilityBGM
+  - Pause
   layers:
   - Default
   - TransparentFX
