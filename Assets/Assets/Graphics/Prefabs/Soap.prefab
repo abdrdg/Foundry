@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: da38c6ee40af3a74dbac2026cee28e71, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -160,11 +160,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dog: {fileID: 0}
-  previousSelected: {fileID: 0}
-  gc: {fileID: 0}
+  manager: {fileID: 0}
+  _menuUI: {fileID: 0}
   _soapingProgression: 0
   _maxSoapingProgression: 100
   _soapSpeed: 10
-  _headProgressionStorer: 0
-  _bodyProgressionStorer: 0
-  _legProgressionStorer: 0
