@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Feeding.unity
     guid: 823f314b475e70d4d8d36b08ae8b5a31
+  - enabled: 1
+    path: Assets/Scenes/Levels/Grooming.unity
+    guid: 28a724e7a7644aa448a757af9bb5f4a9
   m_configObjects: {}
