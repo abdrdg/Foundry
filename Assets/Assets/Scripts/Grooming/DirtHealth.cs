@@ -4,7 +4,6 @@ public class DirtHealth : MonoBehaviour
 {
     public float _hp;
     public DirtHolder dh;
-
     private void Update()
     {
         if(_hp <= 0)
