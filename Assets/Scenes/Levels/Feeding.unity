@@ -643,13 +643,9 @@ MonoBehaviour:
   foods:
   - {fileID: 6523023371512084721, guid: 0676c7cb469be0b46990ab0632bad2a8, type: 3}
   - {fileID: 8548341418054315526, guid: 27ffad5b3fcf7ac4796177c9929aff97, type: 3}
-  - {fileID: 6523023371512084721, guid: 0676c7cb469be0b46990ab0632bad2a8, type: 3}
-  - {fileID: 8548341418054315526, guid: 27ffad5b3fcf7ac4796177c9929aff97, type: 3}
-  - {fileID: 6523023371512084721, guid: 0676c7cb469be0b46990ab0632bad2a8, type: 3}
-  - {fileID: 8548341418054315526, guid: 27ffad5b3fcf7ac4796177c9929aff97, type: 3}
   foodGetter: {fileID: 0}
   foodBowl: {fileID: 1544716727}
-  spawnTimeInterval: 0.6
+  spawnTimeInterval: 1
 --- !u!4 &354051797
 Transform:
   m_ObjectHideFlags: 0
