@@ -1216,6 +1216,7 @@ MonoBehaviour:
   lane: 0
   iter: 0
   Obstac: {fileID: 596437297149343194, guid: 519f509e357c2db4dae046bb8abe6d41, type: 3}
+  speed: 1
 --- !u!4 &770600303
 Transform:
   m_ObjectHideFlags: 0
@@ -1468,6 +1469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca7c91a2430f274f8aa6227e97ca0bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &818484899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,6 +1500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca7c91a2430f274f8aa6227e97ca0bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
 --- !u!212 &818484901
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2407,6 +2410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca7c91a2430f274f8aa6227e97ca0bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &1390576123
 GameObject:
   m_ObjectHideFlags: 0
@@ -2935,6 +2939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca7c91a2430f274f8aa6227e97ca0bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
 --- !u!212 &2040063405
 SpriteRenderer:
   m_ObjectHideFlags: 0
