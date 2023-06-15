@@ -23,6 +23,7 @@ public class FeedingGameManager : MonoBehaviour
     public Sprite goodReact;
     public Sprite badReact;
     public bool changedSprite;
+    public GameObject foodBowl;
     private void Start()
     {
         Time.timeScale = 1;
@@ -49,6 +50,7 @@ public class FeedingGameManager : MonoBehaviour
 
             if (countdownTime <= 0)
             {
+                foodBowl.SetActive(false);
                 Active = false;
                 countdownTime = 0;
                 Timer.text = "00:00";
@@ -72,12 +74,12 @@ public class FeedingGameManager : MonoBehaviour
     public void UpdateGoodScore()
     {
         goodFood++;
-        goodScore.text = goodFood.ToString();
+        goodScore.text = ":" + goodFood.ToString();
     }
     public void UpdateBadScore()
     {
         badFood++;
-        badScore.text = badFood.ToString();
+        badScore.text = ":" + badFood.ToString();
     }
 
     public void WinLoseConditions()
