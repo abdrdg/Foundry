@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 542786303583713274}
   - component: {fileID: 1598000641981113091}
   - component: {fileID: 3573801192890817846}
-  - component: {fileID: 5271914352254738461}
+  - component: {fileID: 8915714623529724734}
   m_Layer: 0
   m_Name: Good Food
   m_TagString: Good Food
@@ -101,14 +101,14 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.5
+  m_GravityScale: 0.4
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &5271914352254738461
-CircleCollider2D:
+--- !u!61 &8915714623529724734
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -120,6 +120,16 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.15670371, y: 0.15670386}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.95, y: 4.2}
+    newSize: {x: 5.95, y: 4.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 2.9749997
+  m_Size: {x: 2.3144693, y: 1.0032406}
+  m_EdgeRadius: 0
