@@ -1011,6 +1011,7 @@ MonoBehaviour:
   _liveCounter: {fileID: 1778373801}
   _gm: {fileID: 0}
   _bgm: {fileID: 335947274}
+  invulnerableTimer: 0
 --- !u!61 &557853493
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3267,6 +3268,10 @@ PrefabInstance:
       propertyPath: _playAgainButton
       value: 
       objectReference: {fileID: 129457736}
+    - target: {fileID: 6633184165103811918, guid: aaf53b1dc8401fe4e95bab64005a7c3f, type: 3}
+      propertyPath: invulnerableTimer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6633184165103811920, guid: aaf53b1dc8401fe4e95bab64005a7c3f, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -3310,6 +3315,10 @@ PrefabInstance:
     - target: {fileID: 6633184165103811920, guid: aaf53b1dc8401fe4e95bab64005a7c3f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633184165103811921, guid: aaf53b1dc8401fe4e95bab64005a7c3f, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6633184165103811923, guid: aaf53b1dc8401fe4e95bab64005a7c3f, type: 3}
       propertyPath: m_Name
