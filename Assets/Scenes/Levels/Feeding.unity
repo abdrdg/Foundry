@@ -649,7 +649,7 @@ MonoBehaviour:
   - {fileID: 8548341418054315526, guid: 27ffad5b3fcf7ac4796177c9929aff97, type: 3}
   foodGetter: {fileID: 0}
   foodBowl: {fileID: 1544716727}
-  spawnTimeInterval: 0.4
+  spawnTimeInterval: 0.6
 --- !u!4 &354051797
 Transform:
   m_ObjectHideFlags: 0
