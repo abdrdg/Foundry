@@ -9,6 +9,7 @@ public class GroomingManager : MonoBehaviour
     public GameObject Dryer;
     public GameObject Brush;
     public GameObject curtain;
+    public GameObject Shower2;
 
     public Canvas _menuUI;
 
@@ -48,6 +49,12 @@ public class GroomingManager : MonoBehaviour
         OnMouse = Instantiate(Brush, transform.position, Quaternion.identity);
     }
 
+    public void EquipShower2()
+    {
+        AntiStack();
+        OnMouse = Instantiate(Shower2, transform.position, Quaternion.identity);
+    }
+
     private void AntiStack()
     {
         if (OnMouse != null)
@@ -71,7 +78,7 @@ public class GroomingManager : MonoBehaviour
                 EquipDryer();
                 break;
             case 3:
-                EquipShower();
+                EquipShower2();
                 break;
             case 2:
                 EquipSoap();
