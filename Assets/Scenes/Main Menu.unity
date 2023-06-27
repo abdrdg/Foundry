@@ -1813,6 +1813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 410955296}
   - component: {fileID: 410955295}
+  - component: {fileID: 410955301}
   - component: {fileID: 410955297}
   - component: {fileID: 410955298}
   - component: {fileID: 410955299}
@@ -1884,7 +1885,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410955294}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.7999878, y: -124, z: 10}
+  m_LocalPosition: {x: -1, y: -119, z: 10}
   m_LocalScale: {x: 16.04, y: 16.04, z: 16.04}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2027,6 +2028,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickSFX: {fileID: 8300000, guid: c0e6d8b634f745b4fadef68833d5738f, type: 3}
+--- !u!114 &410955301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410955294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c8eff367e2b3ef4fb212e813afba16b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dogData: {fileID: 11400000, guid: 0d4586fb85a1ef046ade6a929041fcd4, type: 2}
+  dogType: 
+  dogName: 
+  obedience: 0
+  beauty: 0
+  agility: 0
+  health: 0
+  energy: 0
+  mood: 0
+  dogImage: {fileID: 0}
 --- !u!1 &447302964
 GameObject:
   m_ObjectHideFlags: 0

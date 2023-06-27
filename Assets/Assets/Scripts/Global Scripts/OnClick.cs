@@ -1,30 +1,48 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class OnClick : MonoBehaviour
 {
     public GameObject panel;
-    public bool boolIsActive = false;
+    public UnityEvent onSelect;
+    public UnityEvent onDeselect;
 
-    void Update()
+    private bool isSelected = false;
+
+    public bool IsSelected
     {
-        if(!boolIsActive)
+        get { return isSelected; }
+        set
         {
-            panel.SetActive(false);
+            isSelected = value;
+            UpdateSelectionState();
         }
+    }
 
-        else if (boolIsActive)
+    private void Start()
+    {
+        UpdateSelectionState();
+    }
+
+    private void UpdateSelectionState()
+    {
+        if (isSelected)
         {
+            gameObject.tag = "IsSelected";
             panel.SetActive(true);
+            onSelect.Invoke();
+        }
+        else
+        {
+            gameObject.tag = "Untagged";
+            panel.SetActive(false);
+            onDeselect.Invoke();
         }
     }
 
     private void OnMouseDown()
     {
-        if(!boolIsActive)
-        {
-            boolIsActive = true;
-        }    
-        else
-        boolIsActive = false;
+        isSelected = !isSelected;
+        UpdateSelectionState();
     }
 }
