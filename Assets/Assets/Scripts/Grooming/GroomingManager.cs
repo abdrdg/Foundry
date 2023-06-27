@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Animations;
 using System.Collections;
 
+
 public class GroomingManager : MonoBehaviour
 {
     public GameObject Soap;
@@ -10,13 +11,14 @@ public class GroomingManager : MonoBehaviour
     public GameObject Brush;
     public GameObject curtain;
     public GameObject Shower2;
-
     public Canvas _menuUI;
 
     public int stage = 1;
 
     private void Start()
     {
+
+        
         EquipShower();
     }
 

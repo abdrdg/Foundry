@@ -788,6 +788,73 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586346741}
   m_CullTransparentMesh: 1
+--- !u!1 &739243865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 739243866}
+  - component: {fileID: 739243868}
+  - component: {fileID: 739243867}
+  m_Layer: 0
+  m_Name: DogDataManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &739243866
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739243865}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.5, y: -1.64, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &739243867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739243865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f8b6c393d1e59e48b6cb7590de1b88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dogData:
+    _dogName: 
+    _dogType: 
+    Obedience: 0
+    Agility: 0
+    Health: 0
+    Energy: 0
+    Mood: 0
+  dp: {fileID: 0}
+  dataManager: {fileID: 739243868}
+--- !u!114 &739243868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739243865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b5ca54b5b0cc740951043fa9dad5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &798112531
 GameObject:
   m_ObjectHideFlags: 0
@@ -2542,6 +2609,8 @@ MonoBehaviour:
   Head: {fileID: 842708612}
   Body: {fileID: 1123025675}
   Tails: {fileID: 1603285178}
+  dogStats: {fileID: 739243867}
+  dogManager: {fileID: 739243868}
   manager: {fileID: 0}
 --- !u!1001 &4165202321743561134
 PrefabInstance:

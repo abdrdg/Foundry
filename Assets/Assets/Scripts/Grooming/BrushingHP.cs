@@ -10,6 +10,7 @@ public class BrushingHP : MonoBehaviour
         if (_hp >= 100)
         {
             _hp = 100;
+
         }
     }
 }
