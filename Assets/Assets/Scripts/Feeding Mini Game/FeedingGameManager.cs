@@ -24,6 +24,10 @@ public class FeedingGameManager : MonoBehaviour
     public Sprite badReact;
     public bool changedSprite;
     public GameObject foodBowl;
+
+    public GetDogData dogStats;
+    public DataManager dogManager;
+    private bool statsAdded;
     private void Start()
     {
         Time.timeScale = 1;
@@ -31,6 +35,7 @@ public class FeedingGameManager : MonoBehaviour
         loseText.enabled = false;
         button.gameObject.SetActive(false);
         BGM.Play();
+        statsAdded = false;
     }
 
     void Update()
@@ -89,6 +94,12 @@ public class FeedingGameManager : MonoBehaviour
             Debug.Log("Win");
             winText.enabled = true;         
             TurnOffOtherUI();
+            if(statsAdded==false)
+            {
+                dogStats._dogData.Energy += 2;
+                dogManager.Save(dogStats._dogData, "Test Dog");
+                statsAdded = true;
+            }
         }
         else if (goodFood < badFood)
         {
