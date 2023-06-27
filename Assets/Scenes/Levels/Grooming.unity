@@ -1260,6 +1260,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 0
+  spriteRenderer: {fileID: 842708604}
+  SoapSprite: {fileID: 0}
+  _previousSprite: {fileID: 0}
 --- !u!114 &842708610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1273,6 +1276,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 0
+  spriteRenderer: {fileID: 842708604}
+  ShowerSprite: {fileID: 21300000, guid: 83ecd0ae754730f4f85851ecfb1b24b6, type: 3}
+  _previousSprite: {fileID: 0}
 --- !u!114 &842708611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1286,6 +1292,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 0
+  spriteRenderer: {fileID: 0}
+  DrySprite: {fileID: 21300000, guid: fa7a8390b4ae95b46a5926c97b42d4f9, type: 3}
+  _previousSprite: {fileID: 0}
 --- !u!114 &842708612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1299,6 +1308,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 0
+  spriteRenderer: {fileID: 0}
+  BrushingSprite: {fileID: 21300000, guid: d51c54e8811deef49979d66fa3577037, type: 3}
+  _previousSprite: {fileID: 0}
 --- !u!1 &1123025664 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4165202322216887311, guid: 186879a1bb421744d922a05a8fba48a2, type: 3}
@@ -1406,6 +1418,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 0
+  spriteRenderer: {fileID: 1123025667}
+  SoapSprite: {fileID: 0}
+  _previousSprite: {fileID: 0}
 --- !u!114 &1123025673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1419,6 +1434,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 0
+  spriteRenderer: {fileID: 1123025667}
+  ShowerSprite: {fileID: 21300000, guid: 9abb2f69bb452754bbe71a773e89602f, type: 3}
+  _previousSprite: {fileID: 0}
 --- !u!114 &1123025674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1432,6 +1450,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 0
+  spriteRenderer: {fileID: 0}
+  DrySprite: {fileID: 21300000, guid: 709e9e6743d124948bc931b185fb6e13, type: 3}
+  _previousSprite: {fileID: 0}
 --- !u!114 &1123025675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1445,6 +1466,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 0
+  spriteRenderer: {fileID: 0}
+  BrushingSprite: {fileID: 21300000, guid: 2deb5daf2d8026f4891623b529c3a941, type: 3}
+  _previousSprite: {fileID: 0}
 --- !u!1 &1284431754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,6 +1734,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 0
+  spriteRenderer: {fileID: 1603285170}
+  SoapSprite: {fileID: 0}
+  _previousSprite: {fileID: 0}
 --- !u!114 &1603285176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1723,6 +1750,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 0
+  spriteRenderer: {fileID: 1603285170}
+  ShowerSprite: {fileID: 21300000, guid: 70d6007416bb1454f85154140a3f2338, type: 3}
+  _previousSprite: {fileID: 0}
 --- !u!114 &1603285177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1736,6 +1766,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 0
+  spriteRenderer: {fileID: 0}
+  DrySprite: {fileID: 21300000, guid: f8f471245aeddd24599beef8552a9d52, type: 3}
+  _previousSprite: {fileID: 0}
 --- !u!114 &1603285178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1749,6 +1782,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 0
+  spriteRenderer: {fileID: 0}
+  BrushingSprite: {fileID: 21300000, guid: 7417fbe6f8752ec44af9388e7df93061, type: 3}
+  _previousSprite: {fileID: 0}
 --- !u!1 &1630080057
 GameObject:
   m_ObjectHideFlags: 0

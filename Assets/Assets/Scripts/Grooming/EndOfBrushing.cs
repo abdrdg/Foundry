@@ -37,7 +37,7 @@ public class EndOfBrushing : MonoBehaviour
             Destroy(Head);
             Destroy(Body);
             Destroy(Tails);
-            //Destroy(this.gameObject.GetComponent<EndOfBrushing>());
+            Destroy(this.gameObject.GetComponent<EndOfBrushing>());
 
         }
     }
