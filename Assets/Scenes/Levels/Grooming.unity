@@ -407,6 +407,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586346741}
   m_CullTransparentMesh: 1
+--- !u!1 &628318254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 628318255}
+  - component: {fileID: 628318256}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &628318255
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628318254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.58825797, y: -0.008127037, z: -10.006025}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &628318256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628318254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 209646035117b394d879774234e2d0e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dogData: {fileID: 11400000, guid: ac18470147337a34490573d6b822a8be, type: 2}
+  dd:
+    _dogName: 
+    _dogType: 
+    Obedience: 0
+    Beauty: 0
+    Agility: 0
+    Health: 0
+    Energy: 0
+    Mood: 0
+  _dogType: 
+  _dogName: 
+  _obedience: 0
+  _beauty: 0
+  _agility: 0
+  _health: 0
+  _energy: 0
+  _mood: 0
+  _image: {fileID: 0}
+  dtm: {fileID: 739243868}
 --- !u!1 &739243865
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,6 +520,7 @@ MonoBehaviour:
     _dogName: 
     _dogType: 
     Obedience: 0
+    Beauty: 0
     Agility: 0
     Health: 0
     Energy: 0

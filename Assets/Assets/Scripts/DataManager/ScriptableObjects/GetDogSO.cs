@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class GetDogSO : MonoBehaviour
 {
-    [SerializeField] public DogSO dogData;
+    [SerializeField] public DogSO dogData; //stats reference to SO (base stats)
+    [SerializeField] public DogData dd; //stats to presist
 
+    //Stats in Game
     public string _dogType;
     public string _dogName;
     public int _obedience;
@@ -15,15 +17,28 @@ public class GetDogSO : MonoBehaviour
     public int _energy;
     public int _mood;
     public Sprite _image;
+
+    public DataManager dtm;
     void Start()
     {
-        SetDataOnStart();
+        SetDataOnStart(); // sets SO data as base stats
+        LoadSavedDogData(); // load data file if have
+        ApplyStatsInData(); // apply saved data to base stats
+       // SaveOnDogData();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            dtm.Save(dd, "DylanDrake");
+        }
 
+        if(Input.GetKeyDown(KeyCode.D))
+        {
+            LoadSavedDogData();
+        }
     }
 
     void SetDataOnStart()
@@ -37,5 +52,32 @@ public class GetDogSO : MonoBehaviour
         this._energy = dogData._energy;
         this._mood = dogData._mood;
         this._image = dogData._image;
+    }
+
+    void ApplyStatsInData()
+    {
+        this._obedience += dd.Obedience;
+        this._beauty += dd.Beauty;
+        this._agility += dd.Agility;
+        this._health += dd.Health;  
+        this._energy += dd.Energy;  
+        this._mood += dd.Mood;
+    }
+
+    void SaveOnDogData()
+    {
+        dd._dogType = this._dogType;
+        dd._dogName = this._dogName;
+        dd.Obedience = this._obedience;
+        dd.Beauty = this._beauty;
+        dd.Agility = this._agility;
+        dd.Health = this._health;
+        dd.Energy = this._energy;
+        dd.Mood = this._mood;
+    }
+
+    void LoadSavedDogData()
+    {
+        dd = dtm.Load("DylanDrake");
     }
 }
