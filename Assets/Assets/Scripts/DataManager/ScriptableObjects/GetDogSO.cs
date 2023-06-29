@@ -5,7 +5,7 @@ using UnityEngine;
 public class GetDogSO : MonoBehaviour
 {
     [SerializeField] public DogSO dogData; //stats reference to SO (base stats)
-    [SerializeField] public DogData dd; //stats to presist
+    [SerializeField] private DogData dd; //stats to presist
 
     //Stats in Game
     public string _dogType;
@@ -16,15 +16,17 @@ public class GetDogSO : MonoBehaviour
     public int _health;
     public int _energy;
     public int _mood;
+    public string _fileName;
     public Sprite _image;
 
     public DataManager dtm;
     void Start()
     {
+        _fileName = dogData._fileName;
         SetDataOnStart(); // sets SO data as base stats
         LoadSavedDogData(); // load data file if have
         ApplyStatsInData(); // apply saved data to base stats
-       // SaveOnDogData();
+        //SaveOnDogData();
     }
 
     // Update is called once per frame
@@ -32,7 +34,7 @@ public class GetDogSO : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.A))
         {
-            dtm.Save(dd, "DylanDrake");
+            dtm.Save(dd, _fileName);
         }
 
         if(Input.GetKeyDown(KeyCode.D))
@@ -74,10 +76,12 @@ public class GetDogSO : MonoBehaviour
         dd.Health = this._health;
         dd.Energy = this._energy;
         dd.Mood = this._mood;
+
+
     }
 
     void LoadSavedDogData()
     {
-        dd = dtm.Load("DylanDrake");
+        dd = dtm.Load(_fileName);
     }
 }
