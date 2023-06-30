@@ -5,14 +5,14 @@ public class OnClick : MonoBehaviour
     public GameObject panel;
     public bool boolIsActive = false;
     public SelectionManager sm;
-    void Update()
+
+    private void Update()
     {
-        if(!boolIsActive)
+        if (!boolIsActive)
         {
             panel.SetActive(false);
         }
-
-        else if (boolIsActive)
+        else
         {
             panel.SetActive(true);
         }
@@ -20,17 +20,24 @@ public class OnClick : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if(sm._dogSelected == null)
-        sm._dogSelected = gameObject;
-        else
-        sm._dogSelected = null;
-
-        if (!boolIsActive)
+        if (sm._dogSelected == null)
         {
-            
-            boolIsActive = true;
-        }    
+            sm._dogSelected = gameObject;
+        }
+        else if (sm._dogSelected != gameObject)
+        {
+            sm._dogSelected = gameObject;
+        }
+
+        else if(gameObject == null)
+        {
+            sm._dogSelected = null;
+        }
         else
-        boolIsActive = false;
+        {
+            sm._dogSelected = null;
+        }
+
+        boolIsActive = sm._dogSelected != null;
     }
 }

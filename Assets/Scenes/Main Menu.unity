@@ -503,7 +503,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelToClose: {fileID: 1952965415}
   panelToOpen: {fileID: 1557920222}
-  dog: {fileID: 0}
   sm: {fileID: 65621842}
 --- !u!1 &92168342
 GameObject:
@@ -1728,7 +1727,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelToClose: {fileID: 1557920222}
   panelToOpen: {fileID: 1952965415}
-  dog: {fileID: 0}
   sm: {fileID: 65621842}
 --- !u!1 &408270965
 GameObject:
@@ -2103,7 +2101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 209646035117b394d879774234e2d0e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dogData: {fileID: 11400000, guid: c247778cf2dc9f24d8c7d508de637237, type: 2}
+  dogData: {fileID: 11400000, guid: dd97695f0105cd9459da655940b12858, type: 2}
   dd:
     _dogName: 
     _dogType: 
@@ -3151,6 +3149,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ffcf0e27ce579c4a9c796a68b51f21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &645745557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 645745558}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &645745558
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645745557}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 825.68744, y: 243.23672, z: 6.6327677}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &714970316
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,15 +5,11 @@ public class PanelClose : MonoBehaviour
 {
     public GameObject panelToClose;
     public GameObject panelToOpen;
-    public GameObject dog;
     public SelectionManager sm;
-
-    private Button button;
 
     private void Start()
     {
-        
-        button = GetComponent<Button>();
+        Button button = GetComponent<Button>();
         button.onClick.AddListener(SwitchPanels);
     }
 
@@ -21,6 +17,6 @@ public class PanelClose : MonoBehaviour
     {
         panelToClose.SetActive(false);
         panelToOpen.SetActive(true);
-        dog.SetActive(!dog.activeSelf);
+        sm.ToggleSelectedGameObject();
     }
 }
