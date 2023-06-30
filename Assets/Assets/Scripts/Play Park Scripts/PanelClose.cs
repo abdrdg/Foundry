@@ -12,7 +12,7 @@ public class PanelClose : MonoBehaviour
 
     private void Start()
     {
-        dog = sm._dogSelected;
+        
         button = GetComponent<Button>();
         button.onClick.AddListener(SwitchPanels);
     }

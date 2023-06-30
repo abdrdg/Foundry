@@ -26,6 +26,7 @@ public class GetDogSO : MonoBehaviour
         SetDataOnStart(); // sets SO data as base stats
         LoadSavedDogData(); // load data file if have
         ApplyStatsInData(); // apply saved data to base stats
+        
         //SaveOnDogData();
     }
 
@@ -43,7 +44,7 @@ public class GetDogSO : MonoBehaviour
         }
     }
 
-    void SetDataOnStart()
+    public void SetDataOnStart()
     {
         this._dogType = dogData._dogType;
         this._dogName = dogData._dogName;
@@ -56,7 +57,7 @@ public class GetDogSO : MonoBehaviour
         this._image = dogData._image;
     }
 
-    void ApplyStatsInData()
+    public void ApplyStatsInData()
     {
         this._obedience += dd.Obedience;
         this._beauty += dd.Beauty;
@@ -66,7 +67,7 @@ public class GetDogSO : MonoBehaviour
         this._mood += dd.Mood;
     }
 
-    void SaveOnDogData()
+    public void SaveOnDogData()
     {
         dd._dogType = this._dogType;
         dd._dogName = this._dogName;
@@ -80,7 +81,7 @@ public class GetDogSO : MonoBehaviour
 
     }
 
-    void LoadSavedDogData()
+    public void LoadSavedDogData()
     {
         dd = dtm.Load(_fileName);
     }
