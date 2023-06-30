@@ -59,12 +59,12 @@ public class GetDogSO : MonoBehaviour
 
     public void ApplyStatsInData()
     {
-        this._obedience += dd.Obedience;
-        this._beauty += dd.Beauty;
-        this._agility += dd.Agility;
-        this._health += dd.Health;  
-        this._energy += dd.Energy;  
-        this._mood += dd.Mood;
+        this._obedience = dd.Obedience;
+        this._beauty = dd.Beauty;
+        this._agility = dd.Agility;
+        this._health = dd.Health;  
+        this._energy = dd.Energy;  
+        this._mood = dd.Mood;
     }
 
     public void SaveOnDogData()

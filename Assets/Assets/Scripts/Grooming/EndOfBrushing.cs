@@ -7,7 +7,7 @@ public class EndOfBrushing : MonoBehaviour
     public BrushingHP Head;
     public BrushingHP Body;
     public BrushingHP Tails;
-    public GetDogData dogStats;
+    public GetDogSO dogStats;
     public DataManager dogManager;
     public GameObject manager;
     private bool statsAdded;
@@ -23,12 +23,13 @@ public class EndOfBrushing : MonoBehaviour
         {
             if(statsAdded==false)
             {
-                dogStats._dogData.Agility += 1;
-                dogStats._dogData.Obedience += 1;
-                dogStats._dogData.Health += 1;
-                dogStats._dogData.Energy += 1;
-                dogStats._dogData.Mood += 1;
-                dogManager.Save(dogStats._dogData, "Test Dog");
+                dogStats._agility += 1;
+                dogStats._obedience += 1;
+                dogStats._health += 1;
+                dogStats._energy += 1;
+                dogStats._mood += 1;
+                dogStats.ApplyStatsInData();
+                dogStats.SaveOnDogData();
                 statsAdded = true;
             }
             
