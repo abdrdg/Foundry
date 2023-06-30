@@ -25,7 +25,7 @@ public class FeedingGameManager : MonoBehaviour
     public bool changedSprite;
     public GameObject foodBowl;
 
-    public GetDogData dogStats;
+    public GetDogSO dogStats;
     public DataManager dogManager;
     private bool statsAdded;
     private void Start()
@@ -96,8 +96,9 @@ public class FeedingGameManager : MonoBehaviour
             TurnOffOtherUI();
             if(statsAdded==false)
             {
-                dogStats._dogData.Energy += 2;
-                dogManager.Save(dogStats._dogData, "Test Dog");
+                dogStats._energy += 2;
+                dogStats.ApplyStatsInData();
+                dogStats.SaveOnDogData();
                 statsAdded = true;
             }
         }
