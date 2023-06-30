@@ -2,26 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoapingHP : MonoBehaviour
+public class Showering2HP : MonoBehaviour
 {
     public float _hp;
     public SpriteRenderer spriteRenderer;
-    public Sprite SoapSprite;
+    public Sprite ShowerSprite;
     public Sprite _previousSprite;
 
     private void Start()
     {
         spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
-        _previousSprite = spriteRenderer.sprite;
+        _previousSprite = spriteRenderer.sprite; 
     }
+
     private void Update()
     {
-      if(_hp >= 100)
+        if (_hp >= 100)
         {
-            _hp= 100;
+            _hp = 100;
         }
 
-        if (_hp > 50 && SoapSprite != null)
+        if (_hp > 50 && ShowerSprite != null)
         {
             ChangeSprite();
         }
@@ -29,6 +30,6 @@ public class SoapingHP : MonoBehaviour
 
     public void ChangeSprite()
     {
-        spriteRenderer.sprite = SoapSprite;
+        spriteRenderer.sprite = ShowerSprite;
     }
 }

@@ -155,7 +155,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924903592130729859}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c8f84cefeeb3b24baadfbf7367c6022, type: 3}
   m_Name: 
@@ -179,4 +179,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SoapSprite: {fileID: 5436109740486391766, guid: 67f4caf3a18ef4c4cbd41f81508193c4, type: 3}
+  _power: 5
   canSpawnSoap: 1
+  timer: 0

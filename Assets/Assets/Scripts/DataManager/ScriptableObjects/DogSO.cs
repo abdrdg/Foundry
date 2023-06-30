@@ -12,5 +12,6 @@ public class DogSO : ScriptableObject
     [SerializeField] public int _health;
     [SerializeField] public int _energy;
     [SerializeField] public int _mood;
+    [SerializeField] public string _fileName;
     [SerializeField] public Sprite _image;
 }
