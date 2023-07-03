@@ -1,56 +1,39 @@
+// Add System.IO to work with files!
 using System.IO;
+// Add System.Runtime.Serialization.Formatters.Binary to work with BinaryFormatter!
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class DataManager : MonoBehaviour
 {
-    public DogData _dogData; // Reference to the DogData object to be saved
-
-    private void OnApplicationQuit()
-    {
-        Save(_dogData, "SaveData.dat");
-    }
-
     public void Save(DogData data, string fileName)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Path.Combine(Application.persistentDataPath, fileName);
+        string path = Application.persistentDataPath + "/" + fileName;
+        FileStream stream = new FileStream(path, FileMode.Create);
 
-        try
-        {
-            using (FileStream stream = new FileStream(path, FileMode.Create))
-            {
-                formatter.Serialize(stream, data);
-            }
-            Debug.Log("Save successful: " + path);
-        }
-        catch (System.Exception e)
-        {
-            Debug.LogError("Error saving file: " + e.Message);
-        }
+        formatter.Serialize(stream, data);
+
+        Debug.Log(path);
+        stream.Close();
     }
 
     public DogData Load(string fileName)
     {
-        string path = Path.Combine(Application.persistentDataPath, fileName);
+        string path = Application.persistentDataPath + "/"+ fileName;
 
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
 
-            try
-            {
-                using (FileStream stream = new FileStream(path, FileMode.Open))
-                {
-                    DogData data = formatter.Deserialize(stream) as DogData;
-                    return data;
-                }
-            }
-            catch (System.Exception e)
-            {
-                Debug.LogError("Error loading file: " + e.Message);
-                return null;
-            }
+            DogData data = formatter.Deserialize(stream) as DogData;
+            stream.Close();
+
+            return data;
         }
         else
         {

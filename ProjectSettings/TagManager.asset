@@ -12,8 +12,6 @@ TagManager:
   - AgilityBGM
   - Dirt
   - Pause
-  - Selected
-  - IsSelected
   layers:
   - Default
   - TransparentFX
