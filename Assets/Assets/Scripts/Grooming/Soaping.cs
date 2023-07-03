@@ -5,6 +5,8 @@ using UnityEngine;
 public class Soaping : MonoBehaviour
 {
     public GameObject SoapSprite;
+
+    public float _power; 
     public bool canSpawnSoap = true;
 
     public float timer;
@@ -26,7 +28,7 @@ public class Soaping : MonoBehaviour
     {
         if (collision.name == "Head" || collision.name == "Body" || collision.name == "Legs")
         {
-            collision.GetComponent<SoapingHP>()._hp += 10;
+            collision.GetComponent<SoapingHP>()._hp += _power;
 
             if (canSpawnSoap)
             {
