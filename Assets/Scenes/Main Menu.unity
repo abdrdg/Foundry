@@ -2153,9 +2153,9 @@ MonoBehaviour:
   _health: 0
   _energy: 0
   _mood: 0
-  _fileName: 
+  _fileName: Allanboss
   _image: {fileID: 0}
-  dtm: {fileID: 0}
+  dtm: {fileID: 2059473918}
 --- !u!1 &447302964
 GameObject:
   m_ObjectHideFlags: 0
@@ -6612,9 +6612,9 @@ MonoBehaviour:
   _health: 0
   _energy: 0
   _mood: 0
-  _fileName: 
+  _fileName: Allanboss
   _image: {fileID: 0}
-  dtm: {fileID: 0}
+  dtm: {fileID: 2059473918}
 --- !u!114 &1626736006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7582,6 +7582,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020330098}
   m_CullTransparentMesh: 1
+--- !u!1 &2059473916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2059473917}
+  - component: {fileID: 2059473918}
+  m_Layer: 0
+  m_Name: Datamanager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2059473917
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059473916}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 436, y: 83, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2059473918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059473916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b5ca54b5b0cc740951043fa9dad5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2076846844
 GameObject:
   m_ObjectHideFlags: 0
