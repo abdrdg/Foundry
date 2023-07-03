@@ -10,6 +10,7 @@ public class Timer : MonoBehaviour
 
     public GameObject _gameOverUI;
     public GameObject _playAgainButton;
+    public GameObject _pauseButtonUI;
   
 
     public bool _isAgilityClear = false;
@@ -58,5 +59,6 @@ public class Timer : MonoBehaviour
         _gameOverUI.SetActive(true);
         _playAgainButton.SetActive(true);
         _gameOverUI.GetComponent<TextMeshProUGUI>().text = showText;
+        _pauseButtonUI.SetActive(false);
     }
 }
