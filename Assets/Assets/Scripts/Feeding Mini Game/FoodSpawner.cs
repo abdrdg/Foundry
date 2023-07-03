@@ -12,7 +12,7 @@ public class FoodSpawner : MonoBehaviour
     public BowlCollider foodBowl;
     private int goodFoodWeight = 1;
     private int badFoodWeight = 1;
-
+    private List<GameObject> activeFoods = new List<GameObject>();
     [SerializeField] private float spawnTimeInterval = 0.4f;
 
     // Start is called before the first frame update
@@ -46,57 +46,61 @@ public class FoodSpawner : MonoBehaviour
 
 
     private void CreateItems()
-{
-    Vector3 pos1 = Camera.main.ViewportToWorldPoint(new Vector3(UnityEngine.Random.Range(0.1f, 0.9f), 1.36f, 0));
-    pos1.z = 0.0f;
-
-    Vector3 pos2 = Camera.main.ViewportToWorldPoint(new Vector3(UnityEngine.Random.Range(0.1f, 0.9f), 1.36f, 0));
-    pos2.z = 0.0f;
-
-    int totalWeight = goodFoodWeight + badFoodWeight;
-    var randomFood1 = Random.Range(0, totalWeight - 1);
-    var randomFood2 = Random.Range(0, totalWeight - 1);
-
-    if (randomFood1 < goodFoodWeight)
     {
-        badFoodWeight++;
-        var goodfood = goodPool.Get();
-        goodfood.transform.position = pos1;
-    }
-    else
-    {
-        goodFoodWeight++;
-        var badfood = badPool.Get();
-        badfood.transform.position = pos1;
+        Vector3 pos1 = Camera.main.ViewportToWorldPoint(new Vector3(UnityEngine.Random.Range(0.1f, 0.9f), 1.36f, 0));
+        pos1.z = 0.0f;
+
+        Vector3 pos2 = Camera.main.ViewportToWorldPoint(new Vector3(UnityEngine.Random.Range(0.1f, 0.9f), 1.36f, 0));
+        pos2.z = 0.0f;
+
+        int totalWeight = goodFoodWeight + badFoodWeight;
+        var randomFood1 = Random.Range(0, totalWeight - 1);
+        var randomFood2 = Random.Range(0, totalWeight - 1);
+
+        if (randomFood1 < goodFoodWeight)
+        {
+            badFoodWeight++;
+            var goodfood = goodPool.Get();
+            goodfood.transform.position = pos1;
+            activeFoods.Add(goodfood);
+        }
+        else
+        {
+            goodFoodWeight++;
+            var badfood = badPool.Get();
+            badfood.transform.position = pos1;
+            activeFoods.Add(badfood);
+        }
+
+        if (randomFood2 < goodFoodWeight)
+        {
+            badFoodWeight++;
+            StartCoroutine(DelayedSpawn(pos2, true));
+        }
+        else
+        {
+            goodFoodWeight++;
+            StartCoroutine(DelayedSpawn(pos2, false));
+        }
     }
 
-    if (randomFood2 < goodFoodWeight)
+    private IEnumerator DelayedSpawn(Vector3 position, bool spawnGoodFood)
     {
-        badFoodWeight++;
-        StartCoroutine(DelayedSpawn(pos2, true));
-    }
-    else
-    {
-        goodFoodWeight++;
-        StartCoroutine(DelayedSpawn(pos2, false));
-    }
-}
+        yield return new WaitForSeconds(0.3f);
 
-private IEnumerator DelayedSpawn(Vector3 position, bool spawnGoodFood)
-{
-    yield return new WaitForSeconds(0.3f);
-
-    if (spawnGoodFood)
-    {
-        var goodfood = goodPool.Get();
-        goodfood.transform.position = position;
+        if (spawnGoodFood)
+        {
+            var goodfood = goodPool.Get();
+            goodfood.transform.position = position;
+            activeFoods.Add(goodfood);
+        }
+        else
+        {
+            var badfood = badPool.Get();
+            badfood.transform.position = position;
+            activeFoods.Add(badfood);
+        }
     }
-    else
-    {
-        var badfood = badPool.Get();
-        badfood.transform.position = position;
-    }
-}
 
 
 
@@ -119,5 +123,17 @@ private IEnumerator DelayedSpawn(Vector3 position, bool spawnGoodFood)
         }, false, minAmount, maxAmount);
 
         return pool;
+    }
+
+    public void HideAllFoods()
+    {
+        Debug.Log("Hides all food");
+        foreach (var food in activeFoods)
+        {
+            if (food.activeSelf)
+            {
+                food.SetActive(false);
+            }
+        }
     }
 }

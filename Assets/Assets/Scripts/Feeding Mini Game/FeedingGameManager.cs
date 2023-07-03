@@ -24,7 +24,7 @@ public class FeedingGameManager : MonoBehaviour
     public Sprite badReact;
     public bool changedSprite;
     public GameObject foodBowl;
-
+    public FoodSpawner foodSpawner;
     public GetDogSO dogStats;
     public DataManager dogManager;
     private bool statsAdded;
@@ -92,9 +92,9 @@ public class FeedingGameManager : MonoBehaviour
         if (goodFood > badFood)
         {
             Debug.Log("Win");
-            winText.enabled = true;         
+            winText.enabled = true;
             TurnOffOtherUI();
-            if(statsAdded==false)
+            if (statsAdded == false)
             {
                 dogStats._energy += 2;
                 dogStats.ApplyStatsInData();
@@ -115,9 +115,10 @@ public class FeedingGameManager : MonoBehaviour
             TurnOffOtherUI();
         }
     }
-    
+
     public void TurnOffOtherUI()
     {
+        foodSpawner.HideAllFoods();
         goodScore.enabled = false;
         Timer.enabled = false;
         badScore.enabled = false;
