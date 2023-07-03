@@ -1,22 +1,21 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class PanelClose : MonoBehaviour
+public class PanelClose : MonoBehaviour, IPointerClickHandler
 {
-    public GameObject panelToClose;
-    public GameObject panelToOpen;
-    public SelectionManager sm;
+    public Canvas targetCanvas;
+    public int newSiblingIndex = 3;
 
-    private void Start()
+    public void OnPointerClick(PointerEventData eventData)
     {
-        Button button = GetComponent<Button>();
-        button.onClick.AddListener(SwitchPanels);
-    }
-
-    private void SwitchPanels()
-    {
-        panelToClose.SetActive(false);
-        panelToOpen.SetActive(true);
-        sm.ToggleSelectedGameObject();
+        if (targetCanvas != null)
+        {
+            targetCanvas.transform.SetSiblingIndex(newSiblingIndex);
+        }
+        else
+        {
+            Debug.LogWarning("No target canvas assigned to the script.");
+        }
     }
 }
