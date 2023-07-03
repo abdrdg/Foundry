@@ -13,7 +13,7 @@ public class GetDogData : MonoBehaviour
     //private bool isDataLoaded = false;
     public void Awake()
     {
-       _dogData = dataManager.Load("Jake the Dog");
+       _dogData = dataManager.Load("Test Dog");
         //isDataLoaded = true;
        // dataManager.Save(this._dogData,this._dogData._dogName);
     }

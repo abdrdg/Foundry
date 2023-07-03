@@ -4,7 +4,7 @@ public class OnClick : MonoBehaviour
 {
     public GameObject panel;
     public bool boolIsActive = false;
-
+    public SelectionManager sm;
     void Update()
     {
         if(!boolIsActive)
@@ -20,8 +20,14 @@ public class OnClick : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if(!boolIsActive)
+        if(sm._dogSelected == null)
+        sm._dogSelected = gameObject;
+        else
+        sm._dogSelected = null;
+
+        if (!boolIsActive)
         {
+            
             boolIsActive = true;
         }    
         else

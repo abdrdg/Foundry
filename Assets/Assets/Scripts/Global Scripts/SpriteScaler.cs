@@ -5,22 +5,33 @@ using UnityEngine;
 public class SpriteScaler : MonoBehaviour
 {
     public float targetWidth = 1080f; // The width of the screen you designed the sprites for
+
     private void Start()
     {
         ScaleSprites();
+        ScaleColliders();
     }
-
     private void ScaleSprites()
     {
         SpriteRenderer[] spriteRenderers = FindObjectsOfType<SpriteRenderer>();
 
+        float currentScreenWidth = Screen.width;
+        float scaleFactor = currentScreenWidth / targetWidth;
+
         foreach (SpriteRenderer spriteRenderer in spriteRenderers)
         {
-            // Calculate the scaling factor based on the target width and the current screen width
-            float scaleFactor = Screen.width / targetWidth;
+            spriteRenderer.transform.localScale = new Vector3(scaleFactor, scaleFactor, 1f);
+        }
+    }
 
-            // Scale the sprite's size
-            spriteRenderer.transform.localScale *= scaleFactor;
+    private void ScaleColliders()
+    {
+        Collider2D[] colliders = FindObjectsOfType<Collider2D>();
+
+        foreach (Collider2D collider in colliders)
+        {
+            // Scale the collider's size
+            collider.transform.localScale *= collider.transform.localScale.x;
         }
     }
 }
