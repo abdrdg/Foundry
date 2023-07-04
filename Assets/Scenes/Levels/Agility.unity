@@ -1108,7 +1108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 209646035117b394d879774234e2d0e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dogData: {fileID: 0}
+  dogData: {fileID: 11400000, guid: ac18470147337a34490573d6b822a8be, type: 2}
   dd:
     _dogName: 
     _dogType: 
