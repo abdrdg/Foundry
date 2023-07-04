@@ -20,4 +20,5 @@ MonoBehaviour:
   _health: 1
   _energy: 201
   _mood: 3
+  _fileName: Buldogi
   _image: {fileID: 0}
