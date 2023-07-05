@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dogType: BullDog
   _dogName: 
-  _obedience: 12
-  _beauty: 23
-  _agility: 2312
-  _health: 1
-  _energy: 201
-  _mood: 3
+  _obedience: 100
+  _beauty: 100
+  _agility: 100
+  _health: 100
+  _energy: 100
+  _mood: 100
+  _fileName: Buldogi
   _image: {fileID: 0}

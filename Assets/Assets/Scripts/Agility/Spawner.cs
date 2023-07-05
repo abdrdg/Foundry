@@ -75,7 +75,7 @@ public class Spawner : MonoBehaviour
 
     void ObstacleRNG()
     {
-        obstacNum = Random.Range(2, 5);
+        obstacNum = Random.Range(2, 3);
     }
 
     void SpawnMultiObstac()
