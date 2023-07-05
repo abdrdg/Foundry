@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be4d7e343a0891e4a91823af0297249d, type: 3}
-  m_Name: Bulldog
+  m_Name: Veo
   m_EditorClassIdentifier: 
-  _dogType: BullDog
+  _dogType: 
   _dogName: 
-  _obedience: 100
-  _beauty: 100
-  _agility: 100
-  _health: 100
-  _energy: 100
-  _mood: 100
-  _fileName: Buldogi
+  _obedience: 0
+  _beauty: 0
+  _agility: 0
+  _health: 0
+  _energy: 0
+  _mood: 0
   _image: {fileID: 0}
