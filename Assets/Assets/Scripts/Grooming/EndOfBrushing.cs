@@ -23,13 +23,8 @@ public class EndOfBrushing : MonoBehaviour
         {
             if(statsAdded==false)
             {
-                dogStats._agility += 1;
-                dogStats._obedience += 1;
-                dogStats._health += 1;
-                dogStats._energy += 1;
-                dogStats._mood += 1;
-                dogStats.ApplyStatsInData();
-                dogStats.SaveOnDogData();
+                dogStats.ReturnDogData().Health += 1;
+                dogStats.SaveDogData();
                 statsAdded = true;
             }
             
