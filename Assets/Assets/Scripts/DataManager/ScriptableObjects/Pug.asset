@@ -20,4 +20,5 @@ MonoBehaviour:
   _health: 69
   _energy: 69
   _mood: 69
+  _fileName: Pug
   _image: {fileID: 21300000, guid: 21db44f84ea772d4d90f609ac982868a, type: 3}
