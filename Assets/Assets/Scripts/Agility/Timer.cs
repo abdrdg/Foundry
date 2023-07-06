@@ -10,10 +10,10 @@ public class Timer : MonoBehaviour
 
     public GameObject _gameOverUI;
     public GameObject _playAgainButton;
-    public GameObject _pauseButtonUI;
-  
+    public GetDogSO AgiData;
 
     public bool _isAgilityClear = false;
+
     // Start is called before the first frame update
     void Start()
     {  
@@ -23,8 +23,6 @@ public class Timer : MonoBehaviour
         }
         timer = _timerRef.gameObject.GetComponent<TextMeshProUGUI>();
         timer.text = showntime.ToString();
-
-        
     }
 
     // Update is called once per frame
@@ -39,6 +37,8 @@ public class Timer : MonoBehaviour
             {
                 _isAgilityClear = true;
                 timer.text = "Done";
+
+                showntime = 0;
             }
             
         }
@@ -49,8 +49,17 @@ public class Timer : MonoBehaviour
             if (_gameOverUI != null && _playAgainButton != null)
             {
                 ShowUI("You Win! Great Job!");
+               
                 Time.timeScale = 0f;
+                
             }
+        }
+
+        if(_isAgilityClear)
+        {
+            AgiData.ReturnDogData().Agility += 2;
+            AgiData.SaveDogData();
+            _isAgilityClear = false;
         }
     }
 

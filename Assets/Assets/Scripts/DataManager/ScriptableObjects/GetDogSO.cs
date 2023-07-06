@@ -77,12 +77,20 @@ public class GetDogSO : MonoBehaviour
         dd.Health = this._health;
         dd.Energy = this._energy;
         dd.Mood = this._mood;
+    }
 
-
+    public DogData ReturnDogData()
+    {
+        return dd;
     }
 
     public void LoadSavedDogData()
     {
         dd = dtm.Load(_fileName);
+    }
+
+    public void SaveDogData()
+    {
+        dtm.Save(dd, _fileName);
     }
 }

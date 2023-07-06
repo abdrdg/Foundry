@@ -96,9 +96,8 @@ public class FeedingGameManager : MonoBehaviour
             TurnOffOtherUI();
             if (statsAdded == false)
             {
-                dogStats._energy += 2;
-                dogStats.ApplyStatsInData();
-                dogStats.SaveOnDogData();
+                dogStats.ReturnDogData().Energy += 2;
+                dogStats.SaveDogData();
                 statsAdded = true;
             }
         }

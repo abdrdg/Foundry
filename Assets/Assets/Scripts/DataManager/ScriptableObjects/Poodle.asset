@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Poodle
   m_EditorClassIdentifier: 
   _dogType: Poodle
+  _dogName: 
   _obedience: 8956
   _beauty: 54
   _agility: 23
   _health: 222
   _energy: 48
   _mood: 46
+  _fileName: Poodle
+  _image: {fileID: 0}
