@@ -737,6 +737,7 @@ MonoBehaviour:
   time: 0
   _gameOverUI: {fileID: 1087665731}
   _playAgainButton: {fileID: 129457736}
+  _pauseButtonUI: {fileID: 844013598}
   AgiData: {fileID: 0}
   _isAgilityClear: 0
 --- !u!1 &519420028
@@ -2614,6 +2615,7 @@ MonoBehaviour:
   time: 0
   _gameOverUI: {fileID: 1087665731}
   _playAgainButton: {fileID: 129457736}
+  _pauseButtonUI: {fileID: 0}
   AgiData: {fileID: 623478925}
   _isAgilityClear: 0
 --- !u!1 &1497300878
