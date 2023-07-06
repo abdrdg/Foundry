@@ -514,6 +514,7 @@ MonoBehaviour:
   badReact: {fileID: 0}
   changedSprite: 0
   foodBowl: {fileID: 1544716723}
+  foodSpawner: {fileID: 354051796}
   dogStats: {fileID: 28656458}
   dogManager: {fileID: 28656457}
 --- !u!4 &175174213

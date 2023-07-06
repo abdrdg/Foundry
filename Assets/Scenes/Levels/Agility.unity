@@ -737,6 +737,7 @@ MonoBehaviour:
   time: 0
   _gameOverUI: {fileID: 1087665731}
   _playAgainButton: {fileID: 129457736}
+  _pauseButtonUI: {fileID: 844013598}
   AgiData: {fileID: 0}
   _isAgilityClear: 0
 --- !u!1 &519420028
@@ -1010,6 +1011,7 @@ MonoBehaviour:
   _gameOverUI: {fileID: 1087665731}
   _playAgainButton: {fileID: 129457736}
   _liveCounter: {fileID: 1778373801}
+  _pauseButton: {fileID: 0}
   _gm: {fileID: 0}
   _bgm: {fileID: 335947274}
   invulnerableTimer: 0
@@ -2614,6 +2616,7 @@ MonoBehaviour:
   time: 0
   _gameOverUI: {fileID: 1087665731}
   _playAgainButton: {fileID: 129457736}
+  _pauseButtonUI: {fileID: 844013598}
   AgiData: {fileID: 623478925}
   _isAgilityClear: 0
 --- !u!1 &1497300878
@@ -3410,6 +3413,10 @@ PrefabInstance:
       propertyPath: _liveCounter
       value: 
       objectReference: {fileID: 1778373801}
+    - target: {fileID: 6633184165103811918, guid: aaf53b1dc8401fe4e95bab64005a7c3f, type: 3}
+      propertyPath: _pauseButton
+      value: 
+      objectReference: {fileID: 844013598}
     - target: {fileID: 6633184165103811918, guid: aaf53b1dc8401fe4e95bab64005a7c3f, type: 3}
       propertyPath: _playAgainButton
       value: 
