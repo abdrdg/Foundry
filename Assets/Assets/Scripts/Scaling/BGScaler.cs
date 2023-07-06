@@ -11,7 +11,7 @@ public class BGScaler : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
 
         // world height is always camera's orthographicSize * 2
-        float worldScreenHeight = Camera.main.orthographicSize * 2;
+        float worldScreenHeight = Camera.main.orthographicSize*2;
 
         // world width is calculated by diving world height with screen heigh
         // then multiplying it with screen width

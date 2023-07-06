@@ -128,7 +128,7 @@ public class ViewportHandler : MonoBehaviour
 
             if (constraint == Constraint.Landscape)
             {
-                camera.orthographicSize = 1f / camera.aspect * UnitsSize / 2f;
+                camera.orthographicSize = 1f / camera.aspect * UnitsSize /2f;
             }
             else
             {
