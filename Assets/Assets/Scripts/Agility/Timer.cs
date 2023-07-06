@@ -69,6 +69,7 @@ public class Timer : MonoBehaviour
         _gameOverUI.SetActive(true);
         _playAgainButton.SetActive(true);
         _gameOverUI.GetComponent<TextMeshProUGUI>().text = showText;
+        Debug.Log("DONE");
         _pauseButtonUI.SetActive(false);
     }
 }

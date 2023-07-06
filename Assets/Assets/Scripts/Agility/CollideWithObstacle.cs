@@ -6,6 +6,7 @@ public class CollideWithObstacle : MonoBehaviour
     public GameObject _gameOverUI;
     public GameObject _playAgainButton;
     public GameObject _liveCounter;
+    public GameObject _pauseButton;
     public AgilityMiniGameManager _gm;
     public AudioSource _bgm;
     public float invulnerableTimer;
@@ -54,6 +55,7 @@ public class CollideWithObstacle : MonoBehaviour
                 _bgm.Stop();
                 _gameOverUI.SetActive(true);
                 _playAgainButton.SetActive(true);
+                _pauseButton.SetActive(false);
                 Time.timeScale = 0.0f;
             }
         }
