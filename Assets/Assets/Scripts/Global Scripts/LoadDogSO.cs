@@ -20,6 +20,7 @@ public class LoadDogSO : MonoBehaviour
             Dog.GetComponent<GetDogSO>().SetDataOnStart();
             Dog.GetComponent<GetDogSO>().LoadSavedDogData();
             Dog.GetComponent<GetDogSO>().ApplyStatsInData();
+            dss.DestroyThyself();
         }
         
     }

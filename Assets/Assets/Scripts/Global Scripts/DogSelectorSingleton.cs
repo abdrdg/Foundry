@@ -34,4 +34,10 @@ public class DogSelectorSingleton : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void DestroyThyself()
+    {
+        Destroy(gameObject);
+        instance = null;    // because destroy doesn't happen until end of frame
+    }
 }

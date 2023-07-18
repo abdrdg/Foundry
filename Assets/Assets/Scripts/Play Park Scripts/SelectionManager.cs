@@ -19,7 +19,7 @@ public class SelectionManager : MonoBehaviour
     public void ToggleSelectedGameObject()
     {
         if (_dogSelected != null)
-         _dogSelected.SetActive(!_dogSelected.activeSelf);
-        }
+            _dogSelected.SetActive(!_dogSelected.activeSelf);
+    }
 
 }

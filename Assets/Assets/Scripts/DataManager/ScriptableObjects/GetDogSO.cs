@@ -24,9 +24,12 @@ public class GetDogSO : MonoBehaviour
     {
         _fileName = dogData._fileName;
         SetDataOnStart(); // sets SO data as base stats
+        SaveDogData();
         LoadSavedDogData(); // load data file if have
-        ApplyStatsInData(); // apply saved data to base stats
-        
+        if (dd != null)
+        {
+            ApplyStatsInData(); // apply saved data to base stats
+        }
         //SaveOnDogData();
     }
 
