@@ -36,6 +36,7 @@ public class FeedingGameManager : MonoBehaviour
         button.gameObject.SetActive(false);
         BGM.Play();
         statsAdded = false;
+        Input.multiTouchEnabled = false;
     }
 
     void Update()
